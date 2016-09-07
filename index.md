@@ -2,7 +2,7 @@
 layout: default
 title: Embrace change.
 image: 'dog'
-theme: 
+theme: light
 ---
 
 {% include navigation.html theme=page.theme %}
@@ -50,26 +50,12 @@ theme:
 </header>
 
 <section id="about" class="section">
-  <h2 class="section-title">1. About Me</h2>
+  <h2 class="section-title">1. About</h2>
   <article>
-    <h1 class="section-header">Problem solving is my passion.</h1>
+    <h1 class="section-header">{{ site.title }}</h1>
     <p class="section-body -large">{{ site.tagline }}</p>
-    <a class="section-link -large" href="#contact" data-scroll>Let's create solutions together</a>
+    <a class="section-link -large" href="#contact" data-scroll>View on GitHub</a>
   </article>
-</section>
-
-<section id="creating" class="section">
-  <h2 class="section-title">2. Creating</h2>
-  <div class="section-creating">
-    {% assign projects = site.data.projects | sort: 'order' | limit: 4 %}
-    {% for project in projects %}
-      <div class="section-project">
-        <h3 class="section-header">{{ project.title }}</h3>
-        <p class="section-body">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="section-link" target="_blank" rel="noopener noreferrer">{{ project.cta }}</a>
-      </div>
-    {% endfor %}
-  </div>
 </section>
 
 <section id="writing" class="section">
