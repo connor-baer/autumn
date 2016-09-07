@@ -1,0 +1,62 @@
+// ==== HEADER ==== //
+
+/* Style the header here. */
+
+
+
+.header {
+	background-color: #fafafa;
+	margin-bottom: vr(.5);
+}
+
+.header-background {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: 20% 50% / cover;
+}
+
+.header-large {
+	display: none;
+}
+
+.header-small {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-text {
+	font-size: 56px;
+	font-family: $sans;
+    font-weight: $sans-bold;
+}
+
+@include mappy-bp(small) {
+	.header-small {
+		display: none;
+	}
+
+	.header-background {
+		background: 50% 50% / cover;
+	}
+
+	.header-large {
+		display: block;
+		width: 24rem;
+		max-width: 80%;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 50%;
+	    transform: translateY(-50%);
+	}
+}
