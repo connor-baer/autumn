@@ -1,0 +1,140 @@
+// ==== SECTION ==== //
+
+/* Style the homepage sections here. */
+
+/* 
+ * 1. General
+ * 2. Creating
+ * 3. Writing
+ * 4. Contact
+ */
+
+
+
+// 1. General //
+
+.section {
+	@include ctnr(golden);
+
+	margin-bottom: vr(3);
+}
+
+.section-title {
+	@include font(header3);
+
+	color: palette($secondary);
+}
+
+h1.section-header {
+	@include font(header1);
+}
+
+h3.section-header {
+	@include font(header2);
+}
+
+.section-body {
+	@include font(body);
+}
+
+.section-link {
+	@include link-underline();
+
+	color: palette($primary);
+	&:after {
+		background-color: palette($primary);
+	}
+
+	&:hover:after {
+		background-color: palette($secondary);
+	}
+
+	&.-large {
+      font-size: ms(1);
+    }
+}
+
+@include mappy-bp(small) {
+	.section {
+		margin-bottom: vr(4);
+	}
+}
+
+
+
+// 2. Creating //
+
+.section-creating {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.section-project {
+	margin-bottom: vr(1);
+	width: 100%;
+	
+	@include mappy-bp(small) {
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include mappy-bp(small) {
+	.section-project {
+		width: 45%;
+	}
+}
+
+
+
+// 3. Writing //
+
+.section-post {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.post-body {
+	width: 80%;
+	order: 2;
+}
+
+.post-image {
+	width: 15%;
+	padding-bottom: 15%;
+	height: 100%;
+	background: 50% 50% / cover;
+	order: 3;
+}
+
+.post-medium {
+	margin-top: vr(.75);
+	display: inline-block;
+}
+
+@include mappy-query(phone) {
+	.post-body {
+		width: 100%;
+	}
+
+	.post-image {
+		width: 100%;
+		height: vr(6);
+		margin: vr(.5) 0 vr(1);
+		order: 1;
+	}
+}
+
+
+
+// 4. Contact //
+
+.section-input {
+	width: 100%;
+}

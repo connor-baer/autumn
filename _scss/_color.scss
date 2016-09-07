@@ -1,0 +1,123 @@
+// ==== COLORS ==== //
+
+/* 
+ * Set all colors related things here.
+ */
+
+/* 
+ * 1. Base colors
+ * 2. Color transformations
+ * 3. palette()
+ */
+
+
+
+// 1. Base colors //
+
+$base-pink: #DA1884;
+$base-orange: #FF512F;
+$base-turquoise: #40E0D0;
+
+$base-blue: #2979FF;
+$base-violet: #D500F9;
+$base-red: red;
+$base-green: #00E676;
+$base-yellow: #FFEA00;
+
+$factor-lighter: 35%;
+$factor-light: 7%;
+$factor-dark: 5%;
+$factor-darker: 28%;
+
+$primary: orange;
+$secondary: pink;
+
+
+
+// 2. Color transformations //
+
+/*
+ * Sass map for the color palette; see `_library.scss` for the palette() function. 
+ */
+$_palettes: (
+    pink: (
+        base:  $base-pink,
+        lighter: lighten($base-pink, $factor-lighter),
+        light: lighten($base-pink, $factor-light),
+        dark:  darken($base-pink, $factor-dark),
+        darker: darken($base-pink, $factor-darker)
+    ),
+    orange: (
+        lighter: lighten($base-orange, $factor-lighter),
+        base:  $base-orange,
+        light: lighten($base-orange, $factor-light),
+        dark:  darken($base-orange, $factor-dark),
+        darker: darken($base-orange, $factor-darker)
+    ),
+    turquoise: (
+        lighter: lighten($base-turquoise, $factor-lighter),
+        base:  $base-turquoise,
+        light: lighten($base-turquoise, $factor-light),
+        dark:  darken($base-turquoise, $factor-dark),
+        darker: darken($base-turquoise, $factor-darker)
+    ),
+    blue: (
+        lighter: lighten($base-blue, $factor-lighter),
+        base:  $base-blue,
+        light: lighten($base-blue, $factor-light),
+        dark:  darken($base-blue, $factor-dark),
+        darker: darken($base-blue, $factor-darker)
+    ),
+    violet: (
+        lighter: lighten($base-violet, $factor-lighter),
+        base:  $base-violet,
+        light: lighten($base-violet, $factor-light),
+        dark:  darken($base-violet, $factor-dark),
+        darker: darken($base-violet, $factor-darker)
+    ),
+    red: (
+        lighter: lighten($base-red, $factor-lighter),
+        base:  $base-red,
+        light: lighten($base-red, $factor-light),
+        dark:  darken($base-red, $factor-dark),
+        darker: darken($base-red, $factor-darker)
+    ),
+    green: (
+        lighter: lighten($base-green, $factor-lighter),
+        base:  $base-green,
+        light: lighten($base-green, $factor-light),
+        dark:  darken($base-green, $factor-dark),
+        darker: darken($base-green, $factor-darker)
+    ),
+    yellow: (
+        lighter: lighten($base-yellow, $factor-lighter),
+        base:  $base-yellow,
+        light: lighten($base-yellow, $factor-light),
+        dark:  darken($base-yellow, $factor-dark),
+        darker: darken($base-yellow, $factor-darker)
+    ),
+    gray: (
+        base:    #666,
+        lighter: #FAFAFA,
+        light:   #CCC,
+        dark:    #333,
+        darker:  #1A1A1A
+    ),
+    white: (
+        base:    #fff,
+        light:   #fff,
+        dark:    #fff
+    )
+);
+
+
+
+// 3. palette() //
+
+/* 
+ * A simple function to retrieve a color from the palette.
+ * Adapted from http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/ 
+ */
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($_palettes, $palette), $tone);
+}

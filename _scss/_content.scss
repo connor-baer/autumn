@@ -1,0 +1,47 @@
+// ==== CONTENT ==== //
+
+/* Style the page and post content here. */
+
+
+
+.content-header {
+	@include ctnr(golden);
+
+	padding-top: vr(6);
+	padding-bottom: vr(2);
+}
+
+.content-icon {
+	display: block;
+	margin: 0 auto;
+	width: 25%;
+	height: 25%;
+	fill: url(#icon-gradient);
+
+	stop:first-child {
+		stop-color: palette($secondary);
+	}
+	
+	stop:last-child {
+		stop-color: palette($primary);
+	}
+}
+
+.content {
+	margin-bottom: vr(2);
+
+	h1 {
+		@include ctnr(golden);
+		@include font(header1);
+	}
+
+	h2 {
+		@include ctnr(golden);
+		@include font(header2);
+	}
+
+	p {
+		@include ctnr(golden);
+		@include font(body);
+	}
+}
