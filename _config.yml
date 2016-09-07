@@ -19,7 +19,7 @@ permalink:            /:title/
 
 
 # Site meta
-title:                'Embrace Change.'
+title:                'Change.'
 tagline:              'Change is a minimalist Jekyll theme built by @connor_baer.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
 description:          'Change is a minimalist Jekyll theme built by @connor_baer.'
@@ -51,9 +51,8 @@ social:
 
 nav:
   1. about:           '/#about'
-  2. creating:        '/#creating'
-  3. writing:         '/#writing'
-  4. contact:         '/#contact'
+  2. blog:            '/#blog'
+  3. Use:             '/#use'
 
 mobile: 
   about me:           '/#about'
