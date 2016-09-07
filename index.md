@@ -9,42 +9,19 @@ theme: light
 
 <header class="header">
   <div class="header-background" style="background-image: url('{{ site.baseurl }}/img/{{ page.image }}.jpg')">
-    <svg class="header-large" viewBox="0 0 480 75" role="img" aria-labelledby="aria-header-large">
-      <title id="aria-header-large">Made by Connor. - Logo</title>
+    <svg class="header-svg" viewBox="0 0 480 75" role="img" aria-labelledby="aria-header-svg">
+      <title id="aria-header-svg">Made by Connor. - Logo</title>
       <defs>
-        <g id="text-large">
+        <g id="text-svg">
           <text class="header-text" text-anchor="middle" x="240" y="55">Embrace Change.</text>
         </g>
-        <mask id="mask-large" x="0" y="0" width="480" height="75">
+        <mask id="mask-svg" x="0" y="0" width="480" height="75">
           <rect x="0" y="0" width="480" height="75" fill="#fff"/>
-          <use xlink:href="#text-large" />
+          <use xlink:href="#text-svg" />
         </mask>
       </defs>
-      <rect x="0" y="0" width="480" height="75" mask="url(#mask-large)" fill="white" fill-opacity="1"/>
-      <use xlink:href="#text-large" mask="url(#mask-large)" />
-    </svg>
-    <svg class="header-small" viewBox="0 0 245 150" aria-labelledby="aria-header-small">
-      <title id="aria-header-small">Made by Connor. - Logo</title>
-      <defs>
-        <g id="text-top">
-          <text class="header-text" x="15" y="53">Made by</text>
-        </g>
-        <mask id="mask-top" x="0" y="0" width="245" height="75" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="245" height="75" fill="#fff"/>
-          <use xlink:href="#text-top" />
-        </mask>
-        <g id="text-bottom">
-          <text class="header-text" x="15" y="128">Connor.</text>
-        </g>
-        <mask id="mask-bottom" x="0" y="75" width="240" height="75" maskUnits="userSpaceOnUse">
-          <rect x="0" y="75" width="240" height="75" fill="#fff"/>
-          <use xlink:href="#text-bottom" />
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="245" height="75" mask="url(#mask-top)" fill="white" fill-opacity="1"/>
-      <use xlink:href="#text-top" mask="url(#mask-top)" />
-      <rect x="0" y="75" width="240" height="75" mask="url(#mask-bottom)" fill="white" fill-opacity="1"/>
-      <use xlink:href="#text-bottom" mask="url(#mask-bottom)" />
+      <rect x="0" y="0" width="480" height="75" mask="url(#mask-svg)" fill="white" fill-opacity="1"/>
+      <use xlink:href="#text-svg" mask="url(#mask-svg)" />
     </svg>
   </div>
 </header>
@@ -54,7 +31,7 @@ theme: light
   <article>
     <h1 class="section-header">{{ site.title }}</h1>
     <p class="section-body -large">{{ site.tagline }}</p>
-    <a class="section-link -large" href="#contact" data-scroll>View on GitHub</a>
+    <a class="section-link -large" href="{{ site.github.repo }}">View on GitHub</a>
   </article>
 </section>
 
@@ -85,6 +62,6 @@ theme: light
     <h1 class="section-header">How to set up Change.</h1>
     <p class="section-body -large">Change is very simple to configure.</p>
     <p class="section-body">I will tell you how...later.</p>
-    <a class="section-link" href="#contact" data-scroll>Fork on GitHub</a>
+    <a class="section-link" href="{{ site.github.repo }}">Fork on GitHub</a>
   </article>
 </section>
