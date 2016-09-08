@@ -6,8 +6,7 @@
  * 1. Buttons
  * 2. Inputs
  * 3. Labels
- * 4. Underline
- * 5. Highlight
+ * 4. Highlight
  */
 
 
@@ -44,9 +43,9 @@
 	@include font(app);
 
 	display: block;
-	padding: vr(.25);
+	padding: vr(.25) vr(.5);
 	border: none;
-	border-bottom: 2px solid palette(gray, light);
+	border-radius: vr(.25);
 	background-color: palette(gray, lighter);
 	width: 100%;
 	resize: none;
@@ -71,22 +70,23 @@ textarea {
 	resize: vertical;
 }
 
-select {
+.form-select {
 	@include font(app);
 
 	font-size: ms(-1);
-	border: 1px solid palette(gray);
+	border: 1px solid palette(gray, light);
 	border-radius: 5px;
-	background: #fff;
+	background-color: palette(gray, lighter);
 	padding: vr(.5);
   	display: block;
-  	margin: vr(.25) 0;
+  	margin: vr(2.25) 0 vr(.25) 0;
   	height: vr(1.25);
   	outline: none;
+  	transition: $short;
 
   	&:focus,
 	&:active {
-		box-shadow: 0px 0px 5px 1px palette($primary);
+		border: 1px solid palette($primary);
 
 	}
 }
@@ -105,7 +105,8 @@ select {
 	@include font(app);
 
 	font-size: ms(-1);
-	display: none;
+	max-height: 0px;
+	overflow: hidden;
 	color: red;
 	transition: $short;
 
@@ -120,15 +121,32 @@ select {
 
 .form-label {
 	@include font(app);
-	color: palette(gray, light);
+
+	color: palette(gray);
 	position: absolute;
 	pointer-events: none;
 	top: vr(.25);
-	left: vr(.25);
+	left: vr(.5);
+	transition: $short;
+}
+
+.form-select ~ label {
+	@include font(app);
+
+	color: palette(gray);
+	font-size: ms(-1);
+	position: absolute;
+	top: -#{vr(1.125)};
+	left: 0;
 	transition: $short;
 }
 
 /* Active state */
+
+.form-select:focus ~ label, 
+.form-select:active ~ label {
+	color: palette($primary);
+}
 
 .form-input {
 	&:focus ~ .form-label,
@@ -152,7 +170,7 @@ select {
 	}
 
 	&:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
-		display: inline-block;
+		max-height: vr(1);
 	}
 }
 
@@ -171,59 +189,14 @@ select {
 
 
 
-// 4. Underline //
-
-.form-underline {
-	position: relative;
-	display: block;
-	width: 100%;
-}
-
-.form-underline:before,
-.form-underline:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 0;
-	position: absolute;
-	background: palette($primary);
-	transition: $short;
-}
-
-.form-underline:before {
-	left: 50%;
-}
-
-.form-underline:after {
-	right: 50%;
-}
-
-.form-input {
-
-	/* Error state */
-
-	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:before,
-	&:not(:focus):not(:placeholder-shown):invalid ~ .form-underline:after {
-		width: 50%;
-		background: red;
-	}
-
-	&:focus ~ .form-underline:before,
-	&:focus ~ .form-underline:after {
-		width: 50%;
-	}
-}
-
-
-
-// 5. Highlighter //
+// 4. Highlighter //
 
 .form-highlight {
 	position: absolute;
 	height: vr(1.5);
 	width: 33%;
 	top: 0;
-	left: 0;
+	left: vr(.5);
 	pointer-events: none;
 	opacity: 0.33;
 }
