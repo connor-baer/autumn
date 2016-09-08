@@ -211,7 +211,7 @@ textarea {
 
 @keyframes inputHighlighter {
 	from {
-		background: palette($secondary, light);
+		background: palette($primary, light);
 	}
 	to {
 		width: 0;
