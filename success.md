@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Success!
-metabar: 
+metabar:
 ---
 
 <header class="content-header">

@@ -1,0 +1,211 @@
+// ==== FORM ==== //
+
+// Style all form components here.
+
+// 1. Buttons
+// 2. Inputs
+// 3. Labels
+// 4. Highlight
+
+// 1. Buttons
+
+.button {
+  @include font(app);
+
+  font-size: ms(-1);
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: palette($primary);
+  display: inline-block;
+  outline: none;
+  padding: vr(0.25) vr(0.5);
+  border: 2px solid palette($primary);
+  background-color: palette(white);
+  cursor: pointer;
+  transition: $short;
+
+  &:hover,
+  &:focus {
+    background-color: palette($primary);
+    color: palette(white);
+  }
+}
+
+// 2. Inputs
+
+.form-input {
+  @include font(app);
+
+  display: block;
+  padding: vr(0.25) vr(0.5);
+  border: 0;
+  border-radius: vr(0.25);
+  background-color: palette(gray, lighter);
+  width: 100%;
+  resize: none;
+  outline: none;
+  transition: background-color $short;
+
+  // Active state
+
+  &:focus {
+    outline: none;
+    background-color: palette($primary, lighter);
+  }
+
+  // Error state
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    background-color: palette(red, lighter);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-select {
+  @include font(app);
+
+  font-size: ms(-1);
+  border: 1px solid palette(gray, light);
+  border-radius: 5px;
+  background-color: palette(gray, lighter);
+  padding: vr(0.5);
+  display: block;
+  margin: vr(2.25) 0 vr(0.25);
+  height: vr(1.25);
+  outline: none;
+  transition: $short;
+
+  &:focus,
+  &:active {
+    border: 1px solid palette($primary);
+  }
+}
+
+// 3. Labels
+
+.form-group {
+  position: relative;
+  margin-top: vr(1.5);
+  margin-bottom: vr(1);
+}
+
+.form-error {
+  @include font(app);
+
+  font-size: ms(-1);
+  max-height: 0;
+  overflow: hidden;
+  color: red;
+  transition: $short;
+
+  svg {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+}
+
+.form-label {
+  @include font(app);
+
+  color: palette(gray);
+  position: absolute;
+  pointer-events: none;
+  top: vr(0.25);
+  left: vr(0.5);
+  transition: $short;
+}
+
+.form-select ~ label {
+  @include font(app);
+
+  color: palette(gray);
+  font-size: ms(-1);
+  position: absolute;
+  top: -#{vr(1.125)};
+  left: 0;
+  transition: $short;
+}
+
+// Active state
+
+.form-select:focus ~ label,
+.form-select:active ~ label {
+  color: palette($primary);
+}
+
+.form-input {
+  &:focus ~ .form-label,
+  &:valid ~ .form-label {
+    color: palette($primary);
+    font-size: ms(-1);
+    left: 0;
+    top: -#{vr(1)};
+  }
+
+  // Valid state
+
+  &:not(:focus) ~ .form-label {
+    color: palette(gray);
+  }
+
+  // Error state
+
+  &:not(:focus):not(:placeholder-shown):invalid ~ .form-label {
+    color: palette(red);
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
+    max-height: vr(1);
+  }
+}
+
+// Separated to help Firefox ignore :placeholder-shown
+.form-input {
+  &:not(:placeholder-shown) ~ .form-label {
+    color: palette($primary);
+    font-size: ms(-1);
+    left: 0;
+    top: -#{vr(1)};
+  }
+
+  &:not(:placeholder-shown):not(:focus) ~ .form-label {
+    color: palette(gray);
+  }
+}
+
+// 4. Highlighter
+
+.form-highlight {
+  position: absolute;
+  height: vr(1.5);
+  width: 33%;
+  top: 0;
+  left: vr(0.5);
+  pointer-events: none;
+  opacity: 0.33;
+}
+
+// Active state
+
+.form-input:focus ~ .form-highlight {
+  animation: inputHighlighter $long;
+}
+
+// Animations
+
+@keyframes inputHighlighter {
+  from {
+    background: palette($primary, light);
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}

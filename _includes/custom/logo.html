@@ -1,0 +1,20 @@
+<svg viewBox="0 0 480 80" role="img" aria-labelledby="aria-header-svg">
+  <title id="aria-header-svg">Made by Connor. - Logo</title>
+  <defs>
+    <g id="text-svg">
+      <text class="header-text" text-anchor="middle" x="240" y="55">Embrace Change.</text>
+    </g>
+    <mask id="mask-svg" x="0" y="0" width="480" height="80">
+      <rect x="0" y="0" width="480" height="80"/>
+      <use xlink:href="#text-svg" />
+    </mask>
+    <linearGradient id="svg-logo-fill" x1="0%" y1="33%" x2="100%" y2="66%">
+      <stop offset="0%" stop-color="#000" />
+      <stop offset="100%" stop-color="#000" />
+    </linearGradient>
+  </defs>
+  <g fill="url('#svg-logo-fill')" fill-rule="evenodd">
+    <rect x="0" y="0" width="480" height="80" mask="url(#mask-svg)" fill-opacity="1"/>
+    <use xlink:href="#text-svg" mask="url(#mask-svg)" />
+  </g>
+</svg>

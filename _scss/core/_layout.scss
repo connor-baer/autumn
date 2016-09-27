@@ -1,48 +1,30 @@
 // ==== LAYOUT ==== //
 
-/* Define all global layouts and layout styles here. */
+// Define all global layouts and layout styles here.
 
-/* 
- * 1. Breakpoints
- * 2. ctnr()
- * 3. Helpers
- */
-
-
+// 1. Breakpoints
+// 2. ctnr()
+// 3. Helpers
 
 // 1. Breakpoints //
 
-$breakpoints: (
-  small: 576px,
-  medium: 769px,
-  large: 1025px,
-  x-large: 1441px,
-);
+$breakpoints: (small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
 
-/* You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do. */
-$mappy-queries: (
-  phone: mappy-bp(max-width small),
-  tablet: mappy-bp(small medium),
-  desktop: mappy-bp(medium),
-  desktop-large: mappy-bp(large),
-);
-
-
+// You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
+$mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small medium), desktop: mappy-bp(medium), desktop-large: mappy-bp(large));
 
 // 2. ctnr() //
 
-/* Content can take on three different widths: full, wide and golden. */
+// Content can take on three different widths: full, wide and golden.
 @mixin ctnr($width: null) {
-
   @if $width == null {
     @warn "Mixin ctnr() received no input! Please provide a width.";
   }
-
-  @else if $width == 'golden' {
+  @else if $width == "golden" {
+    display: block;
     width: auto;
     padding-right: vr(1);
     padding-left: vr(1);
-    display: block;
 
     @include mappy-query(desktop) {
       width: 38rem;
@@ -51,12 +33,11 @@ $mappy-queries: (
       margin-left: auto;
     }
   }
-
-  @else if $width == 'wide' {
+  @else if $width == "wide" {
+    display: block;
     width: 100%;
     padding-right: vr(1);
     padding-left: vr(1);
-    display: block;
 
     @include mappy-query(desktop) {
       width: 56rem;
@@ -65,32 +46,28 @@ $mappy-queries: (
       margin-left: auto;
     }
   }
-
-  @else if $width == 'full' {
+  @else if $width == "full" {
     display: block;
     width: 100vw;
     max-width: 100%;
   }
-  
   @else {
     @warn "Mixin ctnr() received invalid input! This width does not exist.";
   }
 }
 
-
-
 // 3. Helpers //
 
-/* Limits width on large screens and centers content. */
+// Limits width on large screens and centers content.
 .site {
   max-width: 72rem;
   margin: 0 auto;
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
+  &::after {
     display: table;
     clear: both;
+    content: "";
   }
 }

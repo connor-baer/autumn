@@ -1,10 +1,11 @@
 {
-    "preset": "wordpress"
-  , "fileExtensions": [ ".js" ]
-  , "excludeFiles": [
-    	"js/**.min.js",
-    	"gulpconfig.js",
-		"gulpfile.js/"
-    ]
-  , "requireVarDeclFirst": false
+  "preset": "airbnb",
+  "fileExtensions": [".js"],
+  "excludeFiles": [
+    "assets/",
+    "_site/",
+    "gulpconfig.js",
+    "gulpfile.js/"
+  ],
+  "requireVarDeclFirst": false
 }

@@ -1,7 +1,7 @@
 // ==== UPDATE ==== //
 
-var gulp    = require('gulp')
-  , plugins = require('gulp-load-plugins')({ camelize: true })
+var gulp    = require('gulp'),
+  plugins = require('gulp-load-plugins')({ camelize: true })
 ;
 
 gulp.task('update', function () {

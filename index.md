@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Embrace change.
-image: 'dog'
+image: '/img/dog.jpg'
 theme: light
 ---
 
-{% include navigation.html theme=page.theme %}
+{% include core/navigation.html theme=page.theme %}
 
 <header class="header">
-  <div class="header-background" style="background-image: url('{{ site.baseurl }}/img/{{ page.image }}.jpg')">
+  <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
     <svg class="header-svg" viewBox="0 0 480 75" role="img" aria-labelledby="aria-header-svg">
       <title id="aria-header-svg">Made by Connor. - Logo</title>
       <defs>

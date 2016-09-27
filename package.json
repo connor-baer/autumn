@@ -1,6 +1,6 @@
 {
   "name": "change",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Change is a minimalist Jekyll theme built by @connor_baer.",
   "main": "index.html",
   "scripts": {

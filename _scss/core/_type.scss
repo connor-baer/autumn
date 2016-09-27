@@ -1,0 +1,234 @@
+// ==== TYPOGRAPHY ==== //
+
+// Define all global font styles here.
+
+// 1. Variables
+// 2. font()
+// 3. Global styles
+
+// 1. Variables //
+
+$sans: "freight-sans-pro", "Freight Sans Pro", "PT Sans", Arial, sans-serif;
+$sans-normal: 500;
+$sans-bold: 700;
+
+$serif: "freight-text-pro", "Freight Text Pro", "Times New Roman", Times, serif;
+$serif-normal: 400;
+$serif-bold: 700;
+
+$code: "Courier New", Courier, monospace;
+
+$ms-base: 1rem;
+$ms-ratio: 1.2;
+
+$typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
+
+@mixin link-underline {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: $short;
+    content: "";
+    z-index: -1;
+  }
+}
+
+// 2. font() //
+
+// The font() function accepts a style parameter.
+// It is intended to promote consistency in the typography,
+// therefore the number of styles should be kept to a minimum.
+// Attributes which change between instances should not be defined here (e.g. color).
+
+@mixin font($style: null) {
+  @if $style == null {
+    @warn "Mixin font() received no input! Please provide a style.";
+
+    color: red;
+    font-size: ms(10);
+  }
+  @else if $style == "title" {
+    font-family: $sans;
+    font-size: ms(5);
+    font-weight: $sans-bold;
+    line-height: 1.2;
+  }
+  @else if $style == "header1" {
+    margin-top: vr(0.75);
+    margin-bottom: vr(0.5);
+    color: palette(gray, darker);
+    font-family: $sans;
+    font-size: ms(4);
+    font-weight: $sans-bold;
+    line-height: 1.2;
+  }
+  @else if $style == "header2" {
+    margin-top: vr(0.5);
+    margin-bottom: vr(0.25);
+    color: palette(gray, dark);
+    font-family: $sans;
+    font-size: ms(1);
+    font-weight: $sans-bold;
+    line-height: 1.2;
+  }
+  @else if $style == "header3" {
+    font-family: $sans;
+    font-size: ms(-1);
+    font-weight: $sans-bold;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  @else if $style == "body" {
+    margin-top: 0;
+    margin-bottom: vr(0.5);
+    font-family: $serif;
+    font-size: ms(0);
+    font-weight: $serif-normal;
+    line-height: 1.75;
+
+    &.-large {
+      font-size: ms(1);
+    }
+
+    a {
+      @include link-underline;
+
+      color: palette($primary);
+
+      &::after {
+        bottom: 2px;
+        background-color: transparent;
+      }
+
+      &:hover::after {
+        background-color: palette($secondary);
+      }
+    }
+  }
+  @else if $style == "app" {
+    font-family: $sans;
+    font-size: ms(0);
+    font-weight: $sans-normal;
+
+    &.-large {
+      font-size: ms(1);
+    }
+
+    a {
+      @include link-underline;
+
+      color: palette($primary);
+    }
+  }
+  @else {
+    @warn "Mixin font() received invalid input! This style does not exist.";
+
+    color: red;
+    font-size: ms(10);
+  }
+}
+
+// 3. Global styles //
+
+// Update the foundational and global aspects of the page here.
+
+html {
+  @include typi-base;
+
+  background-color: palette(gray, darker);
+  font-family: $sans;
+  font-weight: $sans-normal;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  // Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/.
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: palette(white);
+  color: palette(gray, darker);
+  overflow-x: hidden;
+}
+
+a {
+  border: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+strong,
+.strong {
+  font-weight: $serif-bold;
+}
+
+dfn,
+i,
+em,
+.em {
+  font-style: italic;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+  font-family: $code;
+}
+
+pre {
+  max-width: 100%;
+  margin: 0 0 1.75em;
+  padding: 1.75em;
+  border: 1px solid palette(gray, light);
+  font-size: 1rem;
+  line-height: 1.3125;
+  white-space: pre-wrap;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+code {
+  padding: 0.125em 0.25em;
+  background-color: palette(gray, light);
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted palette(gray, light);
+  cursor: help;
+}
+
+mark {
+  padding: 0.125em 0.25em;
+  background: palette(orange, light);
+  color: #fff;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+hr {
+  height: 1px;
+  margin: 0 0 vr(1);
+  border: 0;
+  background-color: palette(gray, light);
+}

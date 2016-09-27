@@ -1,0 +1,171 @@
+// ==== METABAR ==== //
+
+// Style the metabar here.
+
+// 1. Container
+// 2. Elements
+// 3. Themes
+// 4. Headroom
+
+// 1. Container //
+
+.metabar {
+  @include ctnr(full);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  box-shadow: 0 0 1px 0 transparent;
+  z-index: 9999;
+}
+
+.metabar-wrapper {
+  @include ctnr(wide);
+
+  height: 100%;
+}
+
+// 2. Elements //
+
+.metabar-left,
+.metabar-right {
+  // Lift the left & right elements above the center element.
+  position: relative;
+  margin-top: vr(0.5);
+  margin-bottom: vr(0.5);
+  z-index: 10000;
+}
+
+.metabar-left {
+  float: left;
+}
+
+.metabar-center {
+  display: none;
+
+  @include mappy-bp(small) {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: vr(0.5);
+    text-align: center;
+  }
+}
+
+.metabar-right {
+  float: right;
+}
+
+.metabar-logo,
+.metabar-fingerprint,
+.metabar-icon {
+  display: inline-block;
+}
+
+.metabar-fingerprint svg,
+.metabar-icon svg {
+  width: 44px;
+  height: 44px;
+  transition: transform $short;
+  vertical-align: middle;
+  fill: palette(gray, dark);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+.metabar-logo svg {
+  background-color: palette(white);
+
+  stop:first-child {
+    transition: stop-color $short;
+    stop-color: palette($primary);
+  }
+
+  stop:last-child {
+    transition: stop-color $short;
+    stop-color: palette($secondary);
+  }
+
+  @include mappy-query(tablet) {
+    width: 168px;
+    height: 29px;
+    margin-top: 7px;
+  }
+
+
+  @include mappy-query(desktop) {
+    width: 210px;
+    height: 36px;
+    margin-top: 4px;
+  }
+}
+
+.metabar-icon {
+  margin-left: 12px;
+
+  svg {
+    padding: 12px;
+  }
+}
+
+// 3. Themes //
+
+// Dark theme
+
+.headroom--top .metabar.-dark .metabar-logo svg {
+  stop:first-child {
+    stop-color: palette(gray, dark);
+  }
+
+  stop:last-child {
+    stop-color: palette(gray, dark);
+  }
+}
+
+// Light theme
+
+.headroom--top .metabar.-light {
+  .metabar-fingerprint svg,
+  .metabar-icon svg {
+    fill: palette(white);
+  }
+
+  .metabar-logo svg {
+    background-color: transparent;
+
+    stop:first-child {
+      stop-color: palette(white);
+    }
+
+    stop:last-child {
+      stop-color: palette(white);
+    }
+  }
+}
+
+// 4. Headroom //
+
+.headroom .metabar {
+  position: fixed;
+  transition: transform $long, box-shadow $long, background-color $long;
+}
+
+.headroom--not-top .metabar {
+  background-color: palette(white);
+  box-shadow: 0 0 1px 0 palette(gray, light);
+}
+
+.headroom--pinned .metabar,
+.headroom--unpinned.headroom--bottom .metabar {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned .metabar {
+  transform: translateY(-100%);
+}
