@@ -5,7 +5,6 @@ var src    = '', // The raw material of the theme: custom scripts, SCSS source f
   dist     = '_site/', // The distribution package that you'll be uploading to your server; delete it anytime.
   assets   = 'assets/', // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet)
   bower    = 'bower_components/', // Bower packages
-  composer = 'vendor/', // Composer packages
   modules  = 'node_modules/'; // Npm packages
 
 
@@ -30,22 +29,21 @@ module.exports = {
     jekyll: [
       '_config.yml',
       src + '_data/**/*.{json,yml,yaml,csv}',
-      src + '_includes/*/*.html',
+      src + '_includes/**/*.html',
       src + '_layouts/*.html',
       src + '_posts/*.md',
       src + '*/*.{html,md,yml,yaml,txt}',
       src + '*.{html,md,yml,yaml,txt}',
       '!' + modules,
       '!' + bower,
-      '!' + composer,
       '!' + dist
     ],
-    styles:  src + '_scss/*.scss',
+    styles:  src + '_scss/**/*.scss',
     scripts: src + '_js/*.js',
     images:  src + 'img/**/*'
   },
 
-  delete: {
+  clean: {
     src: [dist + assets]
   },
 
@@ -80,7 +78,8 @@ module.exports = {
     chunks: { // Chunks are arrays of paths or globs matching a set of source files; this way you can organize a bunch of scripts that go together into pieces that can then be bundled (above)
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
       core: [
-        src+'_js/scripts.js',
+        src+'_js/core.js',
+        src+'_js/custom.js'
       ],
       navigation: [
         bower+'smooth-scroll/dist/js/smooth-scroll.js',

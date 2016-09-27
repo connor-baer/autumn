@@ -1,8 +1,8 @@
 // ==== IMAGES ==== //
 
-var gulp        = require('gulp'),
-  plugins     = require('gulp-load-plugins')({ camelize: true }),
-  config      = require('../../gulpconfig').images;
+var gulp  = require('gulp'),
+  plugins = require('gulp-load-plugins')({ camelize: true }),
+  config  = require('../../gulpconfig').images;
 
 
 // Resize and optimize images to 1600*640.

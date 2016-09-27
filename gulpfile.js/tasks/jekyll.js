@@ -1,4 +1,4 @@
-var gulp        = require('gulp'),
+var gulp      = require('gulp'),
   cp          = require('child_process'),
   browsersync = require('browser-sync'),
   config      = require('../../gulpconfig').jekyll;
