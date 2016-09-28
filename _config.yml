@@ -5,7 +5,6 @@ highlighter:          rouge
 
 # Gems
 gems:
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
   - jekyll-redirect-from
@@ -13,16 +12,16 @@ gems:
 
 
 # Settings
-color:                '#fff'
+color:                '#000'
 exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile]
 permalink:            /:title/
 
 
 # Site meta
 title:                'Change.'
-tagline:              'Change is a minimalist Jekyll theme built by @connor_baer.'
+tagline:              'Change is a minimalist Jekyll theme built by Connor Bär.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-description:          'Change is a minimalist Jekyll theme built by @connor_baer.'
+description:          'Change is a minimalist Jekyll theme built by Connor Bär.'
 url:                  http://change.connorbaer.io
 baseurl:              ''
 logo:                 /assets/icons/apple-icon-144x144.png
@@ -31,7 +30,7 @@ twitter:
 facebook:
   app_id:             169140053203395
 
-# google_analytics_key: UA-37412525-4 
+# google_analytics_key: UA-37412525-4
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
@@ -42,21 +41,13 @@ author:
 
 social:
   name:               Connor Bär
-  links:              
+  links:
     - https://twitter.com/connor_baer
     - https://instagram.com/connor_baer
     - https://github.com/connor-baer
     - https://medium.com/@connor_baer
 
-nav:
-  1. about:           '/#about'
-  2. blog:            '/#blog'
-  3. Use:             '/#use'
-
-mobile: 
-  about:           '/#about'
-
-version:              2.0.0
+version:              3.0.0
 
 github:
   repo:               https://github.com/connor-baer/change

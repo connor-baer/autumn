@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: en
+ref: africa-country
 title: Africa is not a country.
 image: 'zebra'
 medium: 'africa-is-not-a-country-b2e9d452b2eb'

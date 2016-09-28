@@ -7,6 +7,15 @@
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
 
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+  {% endfor %}
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% for page in pages %}
+    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+
   <title>{{ page.title }} | {{ site.title }}</title>
 
   <!-- CSS -->

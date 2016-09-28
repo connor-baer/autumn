@@ -24,10 +24,11 @@ $ms-ratio: 1.2;
 $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
 
 @mixin link-underline {
-  position: relative;
-  z-index: 1;
   display: inline-block;
+  position: relative;
+  transition: color $short;
   cursor: pointer;
+  z-index: 1;
 
   &::after {
     position: absolute;
@@ -35,7 +36,7 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
     left: 0;
     width: 100%;
     height: 2px;
-    transition: $short;
+    transition: color $short;
     content: "";
     z-index: -1;
   }

@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: en
+ref: europe-proud
 title: This is the Europe I am proud of.
 medium: 'this-is-the-europe-i-am-proud-of-a96fb3847ae3'
 metabar: dark

@@ -1,12 +1,11 @@
 ---
 layout: default
+lang: en
+ref: index
 title: Embrace change.
 image: '/img/dog.jpg'
 theme: light
 ---
-
-{% include core/navigation.html theme=page.theme %}
-
 <header class="header">
   <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
     <svg class="header-svg" viewBox="0 0 480 75" role="img" aria-labelledby="aria-header-svg">
@@ -38,7 +37,7 @@ theme: light
 <section id="blog" class="section">
   <h2 class="section-title">3. Blog</h2>
   <div class="section-writing">
-    {% assign posts = site.posts | sort: 'order' | limit: 3 %}
+    {% assign posts = site.posts | sort: 'order' | where:"lang", page.lang | limit: 3 %}
     {% for post in posts %}
     <article>
       <a href="https://blog.connorbaer.io/{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">

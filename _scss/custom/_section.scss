@@ -39,11 +39,11 @@ h3.section-header {
   color: palette($primary);
 
   &::after {
-    background-color: palette($primary);
+    background-color: palette(gray, lighter);
   }
 
   &:hover::after {
-    background-color: palette($secondary);
+    background-color: palette($primary);
   }
 
   &.-large {

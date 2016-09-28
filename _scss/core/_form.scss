@@ -12,17 +12,17 @@
 .button {
   @include font(app);
 
-  font-size: ms(-1);
-  text-decoration: none;
-  letter-spacing: 1px;
-  color: palette($primary);
   display: inline-block;
-  outline: none;
   padding: vr(0.25) vr(0.5);
-  border: 2px solid palette($primary);
-  background-color: palette(white);
-  cursor: pointer;
   transition: $short;
+  border: 2px solid palette($primary);
+  outline: none;
+  background-color: palette(white);
+  color: palette($primary);
+  font-size: ms(-1);
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -37,14 +37,14 @@
   @include font(app);
 
   display: block;
+  width: 100%;
   padding: vr(0.25) vr(0.5);
+  transition: background-color $short;
   border: 0;
   border-radius: vr(0.25);
-  background-color: palette(gray, lighter);
-  width: 100%;
-  resize: none;
   outline: none;
-  transition: background-color $short;
+  background-color: palette(gray, lighter);
+  resize: none;
 
   // Active state
 
@@ -67,16 +67,16 @@ textarea {
 .form-select {
   @include font(app);
 
-  font-size: ms(-1);
+  display: block;
+  height: vr(1.25);
+  margin: vr(2.25) 0 vr(0.25);
+  padding: vr(0.5);
+  transition: $short;
   border: 1px solid palette(gray, light);
   border-radius: 5px;
-  background-color: palette(gray, lighter);
-  padding: vr(0.5);
-  display: block;
-  margin: vr(2.25) 0 vr(0.25);
-  height: vr(1.25);
   outline: none;
-  transition: $short;
+  background-color: palette(gray, lighter);
+  font-size: ms(-1);
 
   &:focus,
   &:active {
@@ -95,15 +95,15 @@ textarea {
 .form-error {
   @include font(app);
 
-  font-size: ms(-1);
   max-height: 0;
-  overflow: hidden;
-  color: red;
   transition: $short;
+  color: red;
+  font-size: ms(-1);
+  overflow: hidden;
 
   svg {
-    height: 18px;
     width: 18px;
+    height: 18px;
     margin-right: 6px;
     vertical-align: middle;
     fill: currentColor;
@@ -113,23 +113,23 @@ textarea {
 .form-label {
   @include font(app);
 
-  color: palette(gray);
   position: absolute;
-  pointer-events: none;
   top: vr(0.25);
   left: vr(0.5);
   transition: $short;
+  color: palette(gray);
+  pointer-events: none;
 }
 
 .form-select ~ label {
   @include font(app);
 
-  color: palette(gray);
-  font-size: ms(-1);
   position: absolute;
   top: -#{vr(1.125)};
   left: 0;
   transition: $short;
+  color: palette(gray);
+  font-size: ms(-1);
 }
 
 // Active state
@@ -142,10 +142,10 @@ textarea {
 .form-input {
   &:focus ~ .form-label,
   &:valid ~ .form-label {
+    top: -#{vr(1)};
+    left: 0;
     color: palette($primary);
     font-size: ms(-1);
-    left: 0;
-    top: -#{vr(1)};
   }
 
   // Valid state
@@ -168,10 +168,10 @@ textarea {
 // Separated to help Firefox ignore :placeholder-shown
 .form-input {
   &:not(:placeholder-shown) ~ .form-label {
+    top: -#{vr(1)};
+    left: 0;
     color: palette($primary);
     font-size: ms(-1);
-    left: 0;
-    top: -#{vr(1)};
   }
 
   &:not(:placeholder-shown):not(:focus) ~ .form-label {
@@ -183,12 +183,12 @@ textarea {
 
 .form-highlight {
   position: absolute;
-  height: vr(1.5);
-  width: 33%;
   top: 0;
   left: vr(0.5);
-  pointer-events: none;
+  width: 33%;
+  height: vr(1.5);
   opacity: 0.33;
+  pointer-events: none;
 }
 
 // Active state

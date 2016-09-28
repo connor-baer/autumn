@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: en
+ref: nobody-airport
 title: “Nobody has the intention of building an airport!”*
 image: 'airport'
 medium: 'nobody-has-the-intention-of-building-an-airport-f22b641be67f'
