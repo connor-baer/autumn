@@ -10,6 +10,7 @@
 
 $sans: "freight-sans-pro", "Freight Sans Pro", "PT Sans", Arial, sans-serif;
 $sans-normal: 500;
+$sans-semibold: 600;
 $sans-bold: 700;
 
 $serif: "freight-text-pro", "Freight Text Pro", "Times New Roman", Times, serif;
@@ -19,26 +20,32 @@ $serif-bold: 700;
 $code: "Courier New", Courier, monospace;
 
 $ms-base: 1rem;
-$ms-ratio: 1.2;
+$ms-ratio: 1.25;
 
-$typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
+$typi: (null: (16px, 1.75), medium: (20px), x-large: 24px);
 
 @mixin link-underline {
   display: inline-block;
   position: relative;
   transition: color $short;
+  color: palette($primary);
   cursor: pointer;
   z-index: 1;
 
   &::after {
     position: absolute;
-    bottom: -2px;
+    bottom: 2px;
     left: 0;
     width: 100%;
     height: 2px;
-    transition: color $short;
+    transition: background-color $short;
+    background-color: palette(gray, light);
     content: "";
     z-index: -1;
+  }
+
+  &:hover::after {
+    background-color: palette($primary, light);
   }
 }
 
@@ -60,40 +67,38 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
     font-family: $sans;
     font-size: ms(5);
     font-weight: $sans-bold;
-    line-height: 1.2;
+    line-height: 1.25;
   }
   @else if $style == "header1" {
-    margin-top: vr(0.75);
-    margin-bottom: vr(0.5);
+    margin-top: 1rem;
+    margin-bottom: .5rem;
     color: palette(gray, darker);
     font-family: $sans;
     font-size: ms(4);
     font-weight: $sans-bold;
-    line-height: 1.2;
+    line-height: 1.25;
   }
   @else if $style == "header2" {
-    margin-top: vr(0.5);
-    margin-bottom: vr(0.25);
+    margin-top: .5rem;
+    margin-bottom: .25rem;
     color: palette(gray, dark);
     font-family: $sans;
-    font-size: ms(1);
+    font-size: ms(2);
     font-weight: $sans-bold;
-    line-height: 1.2;
+    line-height: 1.25;
   }
   @else if $style == "header3" {
     font-family: $sans;
-    font-size: ms(-1);
-    font-weight: $sans-bold;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
+    font-size: ms(0);
+    font-weight: $sans-semibold;
+    letter-spacing: 0.5px;
   }
   @else if $style == "body" {
     margin-top: 0;
-    margin-bottom: vr(0.5);
+    margin-bottom: .5rem;
     font-family: $serif;
     font-size: ms(0);
     font-weight: $serif-normal;
-    line-height: 1.75;
 
     &.-large {
       font-size: ms(1);
@@ -101,16 +106,20 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
 
     a {
       @include link-underline;
+    }
+  }
+  @else if $style == "quote" {
+    color: palette(gray, dark);
+    font-family: $sans;
+    font-size: ms(4);
+    font-weight: $sans-semibold;
+    line-height: 1.4;
 
-      color: palette($primary);
+    a {
+      @include link-underline;
 
       &::after {
-        bottom: 2px;
-        background-color: transparent;
-      }
-
-      &:hover::after {
-        background-color: palette($secondary);
+        height: 3px;
       }
     }
   }
@@ -125,8 +134,6 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
 
     a {
       @include link-underline;
-
-      color: palette($primary);
     }
   }
   @else {
@@ -164,6 +171,12 @@ body {
   background-color: palette(white);
   color: palette(gray, darker);
   overflow-x: hidden;
+}
+
+// Limits width on large screens and centers content.
+.site {
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 a {
@@ -229,7 +242,7 @@ big {
 
 hr {
   height: 1px;
-  margin: 0 0 vr(1);
+  margin: 1rem 0;
   border: 0;
   background-color: palette(gray, light);
 }

@@ -2,15 +2,35 @@
 
 // Style the header here.
 
-.header {
-  margin-bottom: vr(0.5);
-  background-color: #fafafa;
+.header-title {
+  @include font(quote);
+
+  margin: 4rem 0 2rem;
 }
 
-.header-background {
-  position: relative;
+.header-icons {
+    margin-bottom: 4rem;
+}
+
+.header-icon {
+  margin-right: 1rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: fill $short;
+    fill: palette(gray, dark);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: palette($primary);
+  }
+}
+
+.header-image {
   width: 100%;
-  height: 100vh;
+  padding-bottom: 56.25%;
   background: 50% 50% / cover;
 }
 

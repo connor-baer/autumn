@@ -9,44 +9,20 @@
 
 .nav-wrapper {
   display: block;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  margin: 0 auto;
-  padding: 12px 0 16px;
   list-style: none;
-  text-align: center;
-  box-shadow: 0 0 1px 0 transparent;
-
-  // Headroom
-
-  .headroom & {
-    transition: transform $long, background-color $long;
-    z-index: 9999;
-  }
-
-  .headroom--not-top & {
-    background-color: palette(white);
-    box-shadow: 0 0 1px 0 palette(gray, light);
-  }
-
-  .headroom--pinned & {
-    transform: translateY(0%);
-  }
-
-  .headroom--unpinned & {
-    transform: translateY(100%);
-  }
+  text-align: right;
 }
 
 // 2. Elements //
 
 .nav-link {
-  @include font(header3);
-
   transition: color $short;
-  color: palette(gray, dark);
+  color: palette(gray);
+  font-family: $sans;
+  font-size: 16px;
+  font-weight: $sans-semibold;
+  letter-spacing: 0.5px;
+  vertical-align: bottom;
 
   &:hover {
     color: palette($primary);
@@ -63,14 +39,8 @@
   }
 }
 
-.nav-icon {
-  transition: fill $short;
-  vertical-align: text-bottom;
-  fill: currentColor;
-}
-
 .nav-item {
   display: inline-block;
-  margin: 0 vr(0.75);
+  margin-left: 2rem;
   padding: 0;
 }

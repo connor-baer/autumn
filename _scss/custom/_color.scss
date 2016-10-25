@@ -8,95 +8,113 @@
 
 // 1. Base colors
 
-$base-pink: #da1884;
-$base-orange: #ff6d2d;
-$base-turquoise: #40e0d0;
-
-$base-blue: #2979ff;
-$base-violet: #d500f9;
-$base-red: red;
-$base-green: #00e676;
-$base-yellow: #ffea00;
-
-$factor-lighter: 32%;
-$factor-light: 8%;
-$factor-dark: 8%;
-$factor-darker: 24%;
-
 $primary: orange;
-$secondary: turquoise;
+$secondary: blue;
 
 // 2. Color transformations //
 
 // Sass map for the color palette; see `_library.scss` for the palette() function.
 $_palettes: (
-  pink: (
-    lighter: lighten($base-pink, $factor-lighter),
-    light:   lighten($base-pink, $factor-light),
-    base:    $base-pink,
-    dark:    darken($base-pink, $factor-dark),
-    darker:  darken($base-pink, $factor-darker)
-  ),
-  orange: (
-    lighter: lighten($base-orange, $factor-lighter),
-    light:   lighten($base-orange, $factor-light),
-    base:    $base-orange,
-    dark:    darken($base-orange, $factor-dark),
-    darker:  darken($base-orange, $factor-darker)
-  ),
-  turquoise: (
-    lighter: lighten($base-turquoise, $factor-lighter),
-    light:   lighten($base-turquoise, $factor-light),
-    base:    $base-turquoise,
-    dark:    darken($base-turquoise, $factor-dark),
-    darker:  darken($base-turquoise, $factor-darker)
-  ),
-  blue: (
-    lighter: lighten($base-blue, $factor-lighter),
-    light:   lighten($base-blue, $factor-light),
-    base:    $base-blue,
-    dark:    darken($base-blue, $factor-dark),
-    darker:  darken($base-blue, $factor-darker)
-  ),
-  violet: (
-    lighter: lighten($base-violet, $factor-lighter),
-    light:   lighten($base-violet, $factor-light),
-    base:    $base-violet,
-    dark:    darken($base-violet, $factor-dark),
-    darker:  darken($base-violet, $factor-darker)
-  ),
-  red: (
-    lighter: lighten($base-red, $factor-lighter),
-    light:   lighten($base-red, $factor-light),
-    base:    $base-red,
-    dark:    darken($base-red, $factor-dark),
-    darker:  darken($base-red, $factor-darker)
-  ),
-  green: (
-    lighter: lighten($base-green, $factor-lighter),
-    light:   lighten($base-green, $factor-light),
-    base:    $base-green,
-    dark:    darken($base-green, $factor-dark),
-    darker:  darken($base-green, $factor-darker)
-  ),
-  yellow: (
-    lighter: lighten($base-yellow, $factor-lighter),
-    light:   lighten($base-yellow, $factor-light),
-    base:    $base-yellow,
-    dark:    darken($base-yellow, $factor-dark),
-    darker:  darken($base-yellow, $factor-darker)
-  ),
-  gray: (
-    base: #666,
-    lighter: #f5f5f5,
-    light: #ccc,
-    dark: #333,
-    darker: #1a1a1a
+  black: (
+    base: #000,
+    light: #000,
+    dark: #000
   ),
   white: (
     base: #fff,
     light: #fff,
     dark: #fff
+  ),
+  gray: (
+  lighter: #f7f9fa,
+  light: #e0e3e5,
+  base: #565e64,
+  dark: #323a40,
+  darker: #10181e
+  ),
+  red: (
+    lighter: $oc-red-2,
+    light:   $oc-red-4,
+    base:    $oc-red-6,
+    dark:    $oc-red-8,
+    darker:  $oc-red-9
+  ),
+  pink: (
+    lighter: $oc-pink-2,
+    light:   $oc-pink-4,
+    base:    $oc-pink-6,
+    dark:    $oc-pink-8,
+    darker:  $oc-pink-9
+  ),
+  grape: (
+    lighter: $oc-grape-2,
+    light:   $oc-grape-4,
+    base:    $oc-grape-6,
+    dark:    $oc-grape-8,
+    darker:  $oc-grape-9
+  ),
+  violet: (
+    lighter: $oc-violet-2,
+    light:   $oc-violet-4,
+    base:    $oc-violet-6,
+    dark:    $oc-violet-8,
+    darker:  $oc-violet-9
+  ),
+  indigo: (
+    lighter: $oc-indigo-2,
+    light:   $oc-indigo-4,
+    base:    $oc-indigo-6,
+    dark:    $oc-indigo-8,
+    darker:  $oc-indigo-9
+  ),
+  blue: (
+    lighter: $oc-blue-2,
+    light:   $oc-blue-4,
+    base:    $oc-blue-6,
+    dark:    $oc-blue-8,
+    darker:  $oc-blue-9
+  ),
+  cyan: (
+    lighter: $oc-cyan-2,
+    light:   $oc-cyan-4,
+    base:    $oc-cyan-6,
+    dark:    $oc-cyan-8,
+    darker:  $oc-cyan-9
+  ),
+  teal: (
+    lighter: $oc-teal-2,
+    light:   $oc-teal-4,
+    base:    $oc-teal-6,
+    dark:    $oc-teal-8,
+    darker:  $oc-teal-9
+  ),
+  green: (
+    lighter: $oc-green-2,
+    light:   $oc-green-4,
+    base:    $oc-green-6,
+    dark:    $oc-green-8,
+    darker:  $oc-green-9
+  ),
+  lime: (
+    lighter: $oc-lime-2,
+    light:   $oc-lime-4,
+    base:    $oc-lime-6,
+    dark:    $oc-lime-8,
+    darker:  $oc-lime-9
+  ),
+  yellow: (
+    lighter: $oc-yellow-2,
+    light:   $oc-yellow-4,
+    base:    $oc-yellow-6,
+    dark:    $oc-yellow-8,
+    darker:  $oc-yellow-9
+  ),
+  orange: (
+    lighter: $oc-orange-2,
+    light:   $oc-orange-4,
+    base:    $oc-orange-6,
+    dark:    $oc-orange-8,
+    darker:  $oc-orange-9
   )
 );
 

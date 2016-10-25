@@ -2,11 +2,15 @@
 
 // Style the page and post content here.
 
-.content-header {
-  @include ctnr(golden);
+.content {
+  @include ctnr(three);
+}
 
-  padding-top: vr(6);
-  padding-bottom: vr(2);
+.content-header {
+  @include ctnr(two);
+
+  padding-top: 8rem;
+  padding-bottom: 2rem;
 }
 
 .content-icon {
@@ -17,7 +21,7 @@
   fill: url("#icon-gradient");
 
   stop:first-child {
-    stop-color: palette($secondary);
+    stop-color: palette($primary);
   }
 
   stop:last-child {
@@ -25,23 +29,21 @@
   }
 }
 
-.content {
-  margin-bottom: vr(2);
-
+.content-style {
   h1 {
-    @include ctnr(golden);
+    @include ctnr(two);
 
     @include font(header1);
   }
 
   h2 {
-    @include ctnr(golden);
+    @include ctnr(two);
 
     @include font(header2);
   }
 
   p {
-    @include ctnr(golden);
+    @include ctnr(two);
 
     @include font(body);
   }

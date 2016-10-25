@@ -3,15 +3,24 @@
 // Style the footer here.
 
 .footer {
-  @include ctnr(golden);
+  @include ctnr(three);
 
-  padding-top: vr(1);
-  padding-bottom: vr(1);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footer-text {
+  @include ctnr(two);
   @include font(header3);
 
   color: palette(gray);
-  text-align: center;
+
+  a {
+    transition: color $short;
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
 }

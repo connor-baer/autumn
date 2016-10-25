@@ -4,63 +4,65 @@ lang: en
 ref: index
 title: Embrace change.
 image: '/img/dog.jpg'
-theme: light
+theme: dark
 ---
-<header class="header">
-  <div class="header-background" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
-    <svg class="header-svg" viewBox="0 0 480 75" role="img" aria-labelledby="aria-header-svg">
-      <title id="aria-header-svg">Made by Connor. - Logo</title>
-      <defs>
-        <g id="text-svg">
-          <text class="header-text" text-anchor="middle" x="240" y="55">Embrace Change.</text>
-        </g>
-        <mask id="mask-svg" x="0" y="0" width="480" height="75">
-          <rect x="0" y="0" width="480" height="75" fill="#fff"/>
-          <use xlink:href="#text-svg" />
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="480" height="75" mask="url(#mask-svg)" fill="white" fill-opacity="1"/>
-      <use xlink:href="#text-svg" mask="url(#mask-svg)" />
-    </svg>
-  </div>
-</header>
+<article class="content">
+  <header class="header">
+    <h1 class="header-title">{{ site.description }}</h1>
+    <div class="header-icons">
+      <a class="header-icon" href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ site.title }} on Twitter.">
+				<svg class="header-twitter" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="img">
+					<title>Twitter logo</title>
+					<path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"></path>
+				</svg>
+			</a>
+			<a class="header-icon" href="{{ site.social.medium }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ site.title }} on Medium.">
+				<svg class="header-medium" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="img">
+					<title>Medium logo</title>
+					<path d="M11.824 12.628l-.276.45.798.398 2.744 1.372c.15.076.294.11.418.11.278 0 .467-.177.467-.492V5.883l-4.15 6.745zm4.096-8.67c-.004-.003 0-.01-.003-.012l-4.825-2.412c-.06-.03-.123-.038-.187-.044-.016 0-.03-.01-.047-.01-.184 0-.368.092-.467.254l-.24.39-.5.814-1.89 3.08 1.89 3.076.5.813.5.812.59.95 4.71-7.64c.02-.03.01-.06-.02-.08zm-6.27 7.045L7.17 6.97l-.295-.477-.294-.477-.25-.416v4.867l3.32 1.663.5.25.5.25-.5-.813-.5-.813zM.737 1.68L.59 1.608c-.085-.042-.166-.062-.24-.062-.206 0-.35.16-.35.427v10.162c0 .272.2.594.442.716l4.145 2.08c.107.06.208.08.3.08.257 0 .438-.2.438-.53V4.01c0-.02-.012-.04-.03-.047L.738 1.68z"></path>
+				</svg>
+			</a>
+			<a class="header-icon" href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ site.title }} on GitHub.">
+				<svg class="header-github" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aria-github">
+					<title>GitHub logo</title>
+					<path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path>
+				</svg>
+			</a>
+    </div>
+    <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ page.image }}')">
+    </div>
+  </header>
 
-<section id="about" class="section">
-  <h2 class="section-title">1. About</h2>
-  <article>
-    <h1 class="section-header">{{ site.title }}</h1>
-    <p class="section-body -large">{{ site.tagline }}</p>
-    <a class="section-link -large" href="{{ site.github.repo }}">View on GitHub</a>
-  </article>
-</section>
-
-<section id="blog" class="section">
-  <h2 class="section-title">3. Blog</h2>
-  <div class="section-writing">
-    {% assign posts = site.posts | sort: 'order' | where:"lang", page.lang | limit: 3 %}
-    {% for post in posts %}
+  <section id="about" class="section">
+    <h1 class="section-title">Author</h1>
     <article>
+      <h1 class="section-header">Created by {{ site.author.name }}</h1>
+      <p class="section-body">{{ site.description }} It serves as the foundation for all my websites. You are free to use it under the <a href="https://github.com/connor-baer/change/blob/beta/LICENSE.md">MIT license</a>.</p>
+      <a class="section-link" href="https://twitter.com/{{ site.author.twitter }}">Follow Connor on Twitter</a>
+    </article>
+  </section>
+
+  <section id="blog" class="section">
+    <h1 class="section-title">Posts</h1>
+    <article class="section-writing">
+      {% assign posts = site.posts | sort: 'order' | where:"lang", page.lang | limit: 3 %}
+      {% for post in posts %}
       <a href="https://blog.connorbaer.io/{{ post.medium }}" class="post-link" target="_blank" rel="noopener noreferrer">
         <h3 class="section-header">{{ post.title }}</h3>
-        <div class="section-post">
-          <p class="section-body post-body">{{ post.content | strip_html | truncatewords: 28 }}</p>
-          {% if post.image %}
-          <div class="post-image" style="background-image: url('{{ site.baseurl }}/img/{{ post.image }}-thumb.jpg')"></div>
-          {% endif %}
-        </div>
+        <p class="section-date">{{ post.date | date: '%B %d, %Y' }} · {{ post.time }} min read</p>
+        <p class="section-body">{{ post.content | strip_html | truncatewords: 28 }}</p>
       </a>
+      {% endfor %}
+      <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank" rel="noopener noreferrer">Read more on Medium</a>
     </article>
-    {% endfor %}
-  </div>
-  <a href="https://blog.connorbaer.io/" class="section-link post-medium" target="_blank" rel="noopener noreferrer">Read more on Medium</a>
-</section>
+  </section>
 
-<section id="use" class="section">
-  <h2 class="section-title">3. Use</h2>
-  <article>
-    <h1 class="section-header">How to set up Change.</h1>
-    <p class="section-body -large">Change is very simple to configure.</p>
-    <p class="section-body">I will tell you how...later.</p>
-    <a class="section-link" href="{{ site.github.repo }}">Fork on GitHub</a>
-  </article>
-</section>
+  <section id="use" class="section">
+    <h1 class="section-title">Usage</h1>
+    <article>
+      <h1 class="section-header">How to use Change.</h1>
+      <p class="section-body">Change is very simple to configure. I will tell you how...later.</p>
+      <a class="section-link" href="{{ site.github.repo }}">Fork on GitHub</a>
+    </article>
+  </section>
+</article>

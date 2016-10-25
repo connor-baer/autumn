@@ -37,7 +37,6 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.2.4",
-    "gulp-phpcbf": "^0.1.2",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.1.0",
@@ -47,6 +46,7 @@
     "gulp-update": "0.0.2",
     "gulp-util": "^3.0.7",
     "merge-stream": "^1.0.0",
+    "open-color": "^1.4.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "turbolinks": "^5.0.0"

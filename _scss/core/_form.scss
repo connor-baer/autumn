@@ -13,13 +13,13 @@
   @include font(app);
 
   display: inline-block;
-  padding: vr(0.25) vr(0.5);
+  padding: .25rem .5rem;
   transition: $short;
   border: 2px solid palette($primary);
   outline: none;
   background-color: palette(white);
   color: palette($primary);
-  font-size: ms(-1);
+  font-size: ms(0);
   letter-spacing: 1px;
   text-decoration: none;
   cursor: pointer;
@@ -38,10 +38,10 @@
 
   display: block;
   width: 100%;
-  padding: vr(0.25) vr(0.5);
+  padding: .25rem .5rem;
   transition: background-color $short;
   border: 0;
-  border-radius: vr(0.25);
+  border-radius: .25rem;
   outline: none;
   background-color: palette(gray, lighter);
   resize: none;
@@ -68,9 +68,9 @@ textarea {
   @include font(app);
 
   display: block;
-  height: vr(1.25);
-  margin: vr(2.25) 0 vr(0.25);
-  padding: vr(0.5);
+  height: 1rem;
+  margin: 2rem 0 .25rem;
+  padding: .5rem;
   transition: $short;
   border: 1px solid palette(gray, light);
   border-radius: 5px;
@@ -88,8 +88,8 @@ textarea {
 
 .form-group {
   position: relative;
-  margin-top: vr(1.5);
-  margin-bottom: vr(1);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .form-error {
@@ -98,7 +98,7 @@ textarea {
   max-height: 0;
   transition: $short;
   color: red;
-  font-size: ms(-1);
+  font-size: ms(0);
   overflow: hidden;
 
   svg {
@@ -114,8 +114,8 @@ textarea {
   @include font(app);
 
   position: absolute;
-  top: vr(0.25);
-  left: vr(0.5);
+  top: .25rem;
+  left: .5rem;
   transition: $short;
   color: palette(gray);
   pointer-events: none;
@@ -125,11 +125,11 @@ textarea {
   @include font(app);
 
   position: absolute;
-  top: -#{vr(1.125)};
+  top: -1rem;
   left: 0;
   transition: $short;
   color: palette(gray);
-  font-size: ms(-1);
+  font-size: ms(0);
 }
 
 // Active state
@@ -142,10 +142,10 @@ textarea {
 .form-input {
   &:focus ~ .form-label,
   &:valid ~ .form-label {
-    top: -#{vr(1)};
+    top: -1rem;
     left: 0;
     color: palette($primary);
-    font-size: ms(-1);
+    font-size: ms(0);
   }
 
   // Valid state
@@ -161,17 +161,17 @@ textarea {
   }
 
   &:not(:focus):not(:placeholder-shown):invalid ~ .form-error {
-    max-height: vr(1);
+    max-height: 1rem;
   }
 }
 
 // Separated to help Firefox ignore :placeholder-shown
 .form-input {
   &:not(:placeholder-shown) ~ .form-label {
-    top: -#{vr(1)};
+    top: -1rem;
     left: 0;
     color: palette($primary);
-    font-size: ms(-1);
+    font-size: ms(0);
   }
 
   &:not(:placeholder-shown):not(:focus) ~ .form-label {
@@ -184,9 +184,9 @@ textarea {
 .form-highlight {
   position: absolute;
   top: 0;
-  left: vr(0.5);
+  left: .5rem;
   width: 33%;
-  height: vr(1.5);
+  height: 1rem;
   opacity: 0.33;
   pointer-events: none;
 }
