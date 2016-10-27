@@ -4,6 +4,7 @@
 
 .footer {
   @include ctnr(three);
+  @include clearfix;
 
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -11,9 +12,12 @@
 
 .footer-text {
   @include ctnr(two);
-  @include font(header3);
 
   color: palette(gray);
+  font-family: $sans;
+  font-size: 16px;
+  font-weight: $sans-semibold;
+  letter-spacing: 0.5px;
 
   a {
     transition: color $short;

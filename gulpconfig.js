@@ -25,7 +25,7 @@ module.exports = {
     open: false, // Set to false if you don't like the browser window opening automatically
     reloadDelay: 1000, // Time, in milliseconds, to wait before reloading/injecting
     watchOptions: {
-      debounceDelay: 2000, // This introduces a small delay when watching for file change events to avoid triggering too many reloads
+      debounceDelay: 4000, // This introduces a small delay when watching for file change events to avoid triggering too many reloads
     },
   },
 
@@ -44,7 +44,7 @@ module.exports = {
     ],
     styles:  src + '_scss/**/*.scss',
     scripts: src + '_js/*.js',
-    images:  src + 'img/**/*',
+    images:  src + '_images/**/*',
   },
 
   clean: {
@@ -116,14 +116,48 @@ module.exports = {
   },
 
   images: {
-    dist: {
-      src: [dist + 'img/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `dist` since we are minifying images in place
+    optimize: {
+      src: [src + assets + 'images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `dist` since we are minifying images in place
       imagemin: {
         optimizationLevel: 5,
         progressive: true,
         interlaced: true,
       },
-      dest: dist + 'img/',
+      dest: src + assets + 'images/',
+    },
+    resize: {
+      src: [src + '_images/**/*(*.png|*.jpg|*.jpeg)'], // The source is actually `dist` since we are minifying images in place
+      responsive: {
+        // Convert all images to JPEG format.
+        '*': [{
+          // image.jpg is 1000 pixels wide.
+          width: 1000,
+          withoutEnlargement: false,
+          normalize: true,
+          rename: {
+            extname: '.jpg',
+          },
+        }, {
+          // image-large.jpg is 2000 pixels wide.
+          width: 1000 * 2,
+          withoutEnlargement: false,
+          normalize: true,
+          rename: {
+            suffix: '-large',
+            extname: '.jpg',
+          },
+        }, {
+          // image-small.jpg is 500 pixels wide.
+          width: 1000 / 2,
+          withoutEnlargement: false,
+          normalize: true,
+          rename: {
+            suffix: '-small',
+            extname: '.jpg',
+          },
+        },],
+      },
+      dest: src + assets + 'images/',
     },
   },
 };

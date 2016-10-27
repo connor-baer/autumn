@@ -2,6 +2,15 @@
 layout: default
 ---
 
-<article class="content content-style">
-  {{ content }}
+<article class="content">
+  <header class="header">
+    <a name="{{ page.title }}"><h1 class="header-title">{{ page.title }}</h1></a>
+    {% if page.image %}
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}-large.jpg')"></div>
+    {% endif %}
+  </header>
+
+  <div class="content-style">
+    {{ content }}
+  </div>
 </article>

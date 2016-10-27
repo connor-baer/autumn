@@ -10,7 +10,7 @@
 // 1. Buttons
 
 .button {
-  @include font(app);
+  @include font(body);
 
   display: inline-block;
   padding: .25rem .5rem;
@@ -34,7 +34,7 @@
 // 2. Inputs
 
 .form-input {
-  @include font(app);
+  @include font(body);
 
   display: block;
   width: 100%;
@@ -65,7 +65,7 @@ textarea {
 }
 
 .form-select {
-  @include font(app);
+  @include font(body);
 
   display: block;
   height: 1rem;
@@ -93,7 +93,7 @@ textarea {
 }
 
 .form-error {
-  @include font(app);
+  @include font(body);
 
   max-height: 0;
   transition: $short;
@@ -111,7 +111,7 @@ textarea {
 }
 
 .form-label {
-  @include font(app);
+  @include font(body);
 
   position: absolute;
   top: .25rem;
@@ -122,7 +122,7 @@ textarea {
 }
 
 .form-select ~ label {
-  @include font(app);
+  @include font(body);
 
   position: absolute;
   top: -1rem;

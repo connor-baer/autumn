@@ -1,9 +1,9 @@
 ---
 layout: post
 lang: en
-ref: nobody-airport
-title: “Nobody has the intention of building an airport!”*
-time: 2
+ref: nobody-has-airport
+title: “Nobody has an airport!”*
+time: 4
 image: 'airport'
 medium: 'nobody-has-the-intention-of-building-an-airport-f22b641be67f'
 metabar: dark
@@ -11,16 +11,11 @@ metabar: dark
 
 Those were the words that passed through my mind when I got on the impossibly crowded bus to Berlin Tegel airport. I’ve never seen so many people unintentionally hugging each other. I started to fully understand the tragedy behind the disaster that some people call [Berlin Brandenburg Airport](http://www.berlin-airport.de/en/index.php). Not only did I understand it, I could also feel it painfully in the form of an elbow in my back.
 
-<figure class="full">
-  <img
-  	srcset="/assets/images/dog-large.jpg 2000w,
-  	        /assets/images/dog.jpg 1000w,
-  	        /assets/images/dog-small.jpg 500w"
-    sizes="(min-width: 769px): calc(100vw - 8rem), calc(100vw - 4rem)"
-  	src="/assets/images/dog.jpg"
-  	alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork.">
-  <figcaption>This is a caption.</figcaption>
-</figure>
+1. Hello
+2. World
+  - do
+  - you
+  - copy
 
 When I finally got off the bus after what felt like an hour the delight of being at an airport washed away my discontent. I made my way through the travellers, snagged a chocolate heart that stewardesses of Air Berlin handed out and looked out for my friend [Arzu](http://www.arzucanaskin.com/). She was the reason I was at the airport. In about an hour she would board the Airbus A321 to Istanbul and then continue her journey to Hong Kong where she would attend [Li Po Chun United World College](http://www.lpcuwc.edu.hk/) for two years.
 

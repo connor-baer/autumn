@@ -8,7 +8,7 @@
 
 // 1. Base colors
 
-$primary: orange;
+$primary: brand;
 $secondary: blue;
 
 // 2. Color transformations //
@@ -26,11 +26,11 @@ $_palettes: (
     dark: #fff
   ),
   gray: (
-  lighter: #f7f9fa,
-  light: #e0e3e5,
-  base: #565e64,
-  dark: #323a40,
-  darker: #10181e
+  lighter: $oc-gray-1,
+  light:   $oc-gray-3,
+  base:    $oc-gray-6,
+  dark:    $oc-gray-8,
+  darker:  $oc-gray-9
   ),
   red: (
     lighter: $oc-red-2,
@@ -113,6 +113,13 @@ $_palettes: (
     lighter: $oc-orange-2,
     light:   $oc-orange-4,
     base:    $oc-orange-6,
+    dark:    $oc-orange-8,
+    darker:  $oc-orange-9
+  ),
+  brand: (
+    lighter: $oc-orange-2,
+    light:   $oc-orange-4,
+    base:    #f9745f,
     dark:    $oc-orange-8,
     darker:  $oc-orange-9
   )

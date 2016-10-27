@@ -8,10 +8,10 @@
 
 // 1. Breakpoints //
 
-$breakpoints: (small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
+$breakpoints: (x-small: 359px, small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
 
 // You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
-$mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small medium), desktop: mappy-bp(medium), desktop-large: mappy-bp(large));
+$mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desktop: mappy-bp(medium), desktop-large: mappy-bp(large));
 
 // 2. Helpers //
 
@@ -36,8 +36,6 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small medium
     max-width: 100%;
   }
   @else if $width == "three" {
-    @include clearfix;
-
     display: block;
     width: 100%;
     padding-right: 2rem;
@@ -52,10 +50,12 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small medium
     }
   }
   @else if $width == "two" {
+    @include clearfix;
+
     display: block;
     width: 100%;
 
-    @include mappy-query(desktop) {
+    @include mappy-query(tablet) {
       width: 70%;
       max-width: 700px;
       padding-left: 2rem;
@@ -63,10 +63,12 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small medium
     }
   }
   @else if $width == "one" {
+    @include clearfix;
+
     display: block;
     width: 100%;
 
-    @include mappy-query(desktop) {
+    @include mappy-query(tablet) {
       width: 30%;
       max-width: 300px;
       padding-right: 2rem;

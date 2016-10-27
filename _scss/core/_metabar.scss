@@ -20,8 +20,8 @@
   @include clearfix;
   @include ctnr(three);
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+
 }
 
 // 2. Elements //
@@ -46,7 +46,7 @@
 
     &:hover,
     &:focus {
-      fill: palette(orange);
+      fill: palette($primary);
     }
   }
 }

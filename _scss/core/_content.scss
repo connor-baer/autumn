@@ -9,29 +9,24 @@
 .content-header {
   @include ctnr(two);
 
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
 .content-icon {
   display: block;
-  width: 25%;
-  height: 25%;
-  margin: 0 auto;
-  fill: url("#icon-gradient");
-
-  stop:first-child {
-    stop-color: palette($primary);
-  }
-
-  stop:last-child {
-    stop-color: palette($primary);
-  }
+  width: 8rem;
+  height: 8rem;
+  fill: palette($primary);
 }
 
 .content-style {
+  @include clearfix;
+
+  margin: 2.5rem 0 4rem;
+
   h1 {
-    @include ctnr(two);
+    @include ctnr(one);
 
     @include font(header1);
   }
@@ -42,9 +37,175 @@
     @include font(header2);
   }
 
-  p {
+  h3 {
+    @include ctnr(two);
+
+    @include font(header3);
+  }
+
+  > p,
+  > ol,
+  > ul {
     @include ctnr(two);
 
     @include font(body);
+
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-family: $serif;
+    font-weight: $serif-normal;
+  }
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  > ol,
+  > ul {
+    padding-left: 3rem;
+  }
+
+  li > ol,
+  li > ul {
+    padding-bottom: 0;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  blockquote {
+    @include ctnr(full);
+
+    @include font(quote);
+
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    clear: both;
+  }
+
+  .blockquote {
+    @include ctnr(two);
+
+    @include font(body);
+
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: palette(gray);
+    font-family: $serif;
+    font-style: italic;
+    font-weight: $serif-normal;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1rem;
+      width: 3px;
+      height: 100%;
+      background-color: palette(gray, light);
+      content: "";
+
+      @include mappy-query(tablet) {
+        left: 1rem;
+      }
+    }
+  }
+
+  cite {
+    @include font(body);
+
+    display: block;
+    padding-top: 1rem;
+    color: palette(gray);
+    font-family: $serif;
+    font-size: ms(-1);
+    font-style: normal;
+    font-weight: $serif-normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  figure {
+    clear: both;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      // Make sure images are scaled correctly.
+      vertical-align: middle;
+    }
+
+    &.full {
+      @include ctnr(full);
+
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+
+    &.side {
+      @include ctnr(one);
+
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  figcaption {
+    @include font(body);
+
+    margin-top: .5rem;
+    color: palette(gray);
+    font-size: ms(-1);
+  }
+
+  div {
+    @include ctnr(full);
+  }
+}
+
+.content-related {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background-color: palette(gray, lighter);
+
+  h3 {
+    @include font(header1);
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  section {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+
+    @include mappy-query(tablet) {
+      width: calc(33.33% - 1.25rem);
+    }
+  }
+
+  h4 {
+    @include font(header3);
+
+    transition: color $short;
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
   }
 }

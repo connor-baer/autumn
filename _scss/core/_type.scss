@@ -22,7 +22,7 @@ $code: "Courier New", Courier, monospace;
 $ms-base: 1rem;
 $ms-ratio: 1.25;
 
-$typi: (null: (16px, 1.75), medium: (20px), x-large: 24px);
+$typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
 
 @mixin link-underline {
   display: inline-block;
@@ -64,19 +64,38 @@ $typi: (null: (16px, 1.75), medium: (20px), x-large: 24px);
     font-size: ms(10);
   }
   @else if $style == "title" {
+    color: palette(gray, dark);
     font-family: $sans;
     font-size: ms(5);
     font-weight: $sans-bold;
-    line-height: 1.25;
+    line-height: 1.4;
+
+    a {
+      @include link-underline;
+
+      &::after {
+        height: 4px;
+        bottom: -2px;
+      }
+    }
   }
   @else if $style == "header1" {
-    margin-top: 1rem;
+    margin-top: 0;
     margin-bottom: .5rem;
     color: palette(gray, darker);
     font-family: $sans;
-    font-size: ms(4);
+    font-size: ms(3);
     font-weight: $sans-bold;
     line-height: 1.25;
+
+    &::after {
+      display: block;
+      width: 4rem;
+      height: 0.33rem;
+      margin-top: .5rem;
+      background-color: palette($primary);
+      content: "";
+    }
   }
   @else if $style == "header2" {
     margin-top: .5rem;
@@ -88,17 +107,17 @@ $typi: (null: (16px, 1.75), medium: (20px), x-large: 24px);
     line-height: 1.25;
   }
   @else if $style == "header3" {
+    margin-top: .5rem;
+    margin-bottom: .25rem;
     font-family: $sans;
-    font-size: ms(0);
-    font-weight: $sans-semibold;
-    letter-spacing: 0.5px;
+    font-size: ms(1);
+    font-weight: $sans-bold;
+    line-height: 1.25;
   }
   @else if $style == "body" {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    font-family: $serif;
+    font-family: $sans;
     font-size: ms(0);
-    font-weight: $serif-normal;
+    font-weight: $sans-normal;
 
     &.-large {
       font-size: ms(1);
@@ -110,30 +129,17 @@ $typi: (null: (16px, 1.75), medium: (20px), x-large: 24px);
   }
   @else if $style == "quote" {
     color: palette(gray, dark);
-    font-family: $sans;
-    font-size: ms(4);
-    font-weight: $sans-semibold;
+    font-family: $serif;
+    font-size: ms(5);
+    font-weight: $serif-normal;
     line-height: 1.4;
 
     a {
       @include link-underline;
 
       &::after {
-        height: 3px;
+        height: 2px;
       }
-    }
-  }
-  @else if $style == "app" {
-    font-family: $sans;
-    font-size: ms(0);
-    font-weight: $sans-normal;
-
-    &.-large {
-      font-size: ms(1);
-    }
-
-    a {
-      @include link-underline;
     }
   }
   @else {
@@ -245,4 +251,14 @@ hr {
   margin: 1rem 0;
   border: 0;
   background-color: palette(gray, light);
+}
+
+time,
+.time {
+  @include font(body);
+
+  display: inline-block;
+  color: palette(gray);
+  font-size: ms(-1);
+  line-height: 1;
 }
