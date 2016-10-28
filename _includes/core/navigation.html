@@ -1,5 +1,5 @@
 {% capture html %}
-<ul class="nav-wrapper">
+<ul class="navigation-wrapper">
 {% assign entries = site.pages | where:"lang", page.lang | sort: "order" %}
 {% for entry in entries %}
 	{% unless entry.exclude == true %}
@@ -8,8 +8,8 @@
     {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
 
     {% if current == include.context %}
-      <li class="nav-item {% if page.url contains entry.url %} open{% endif %}">
-        <a class="nav-link{% if page.url == entry.url %} active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+      <li class="navigation-item {% if page.url contains entry.url %} open{% endif %}">
+        <a class="navigation-link{% if page.url == entry.url %} navigation-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
       </li>
     {% endif %}
 

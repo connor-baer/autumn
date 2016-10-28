@@ -14,21 +14,18 @@
   margin-top: 4rem;
   margin-bottom: 2rem;
 
-  > h1 {
-    @include ctnr(one);
-  }
-
   > article {
     @include ctnr(two);
 
-    > *:first-child,
-    > *:first-child .section-header {
+    > *:first-child {
       margin-top: .5rem;
     }
   }
 }
 
 .section-title {
+  @include ctnr(one);
+
   @include font(header1);
 
   margin-bottom: 2rem;
@@ -37,14 +34,9 @@
 .section-header {
   @include font(header2);
 
+  display: block;
   margin-top: 2rem;
-  margin-bottom: .5rem;
-  transition: color $short;
-
-  a &:hover,
-  a &:focus {
-    color: palette($primary);
-  }
+  margin-bottom: .25rem;
 }
 
 .section-body {
@@ -61,5 +53,11 @@
 }
 
 .section-link {
-  @include link-underline;
+  @include underline();
+
+  font-weight: $sans-semibold;
+
+  &::after {
+    content: " →";
+  }
 }

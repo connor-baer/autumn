@@ -4,8 +4,6 @@
 
 // 1. Container
 // 2. Elements
-// 3. Themes
-// 4. Headroom
 
 // 1. Container //
 
@@ -14,14 +12,25 @@
 
   background-color: transparent;
   box-shadow: 0 0 1px 0 transparent;
+
+  // Light theme
+  &.-light {
+    .metabar-logo svg {
+      fill: palette(white);
+    }
+  }
 }
 
 .metabar-wrapper {
   @include clearfix;
+
   @include ctnr(three);
 
-  padding-top: 40px;
+  padding-top: 20px;
 
+  @include mappy-query(tablet) {
+    padding-top: 40px;
+  }
 }
 
 // 2. Elements //
@@ -72,15 +81,5 @@
   &:hover,
   &:focus {
     color: palette($primary);
-  }
-}
-
-// 3. Themes //
-
-// Light theme
-
-.metabar.-light {
-  .metabar-logo svg {
-    fill: palette(white);
   }
 }

@@ -7,7 +7,7 @@
 
 // 1. Container //
 
-.nav-wrapper {
+.navigation-wrapper {
   display: block;
   list-style: none;
   text-align: right;
@@ -15,8 +15,9 @@
 
 // 2. Elements //
 
-.nav-link {
-  transition: color $short;
+.navigation-link {
+  @include underline;
+
   color: palette(gray);
   font-family: $sans;
   font-size: 16px;
@@ -29,17 +30,20 @@
   }
 
   // Light theme
-
-  .headroom--top .nav.-light & {
+  .metabar.-light & {
     color: palette(white);
   }
 
-  .headroom--top .nav.-light &:hover {
+  .metabar.-light &:hover {
     color: palette($primary);
   }
 }
 
-.nav-item {
+.navigation-active {
+  color: palette(gray, dark);
+}
+
+.navigation-item {
   display: inline-block;
   margin-left: 2rem;
   padding: 0;

@@ -34,6 +34,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
     display: block;
     width: 100vw;
     max-width: 100%;
+    clear: both;
   }
   @else if $width == "three" {
     display: block;

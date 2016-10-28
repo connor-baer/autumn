@@ -1,4 +1,4 @@
-<a href="https://blog.connorbaer.io/{{ page.medium }}" title="Read '{{ page.title }}' on Medium.">
+<a class="date" href="https://blog.connorbaer.io/{{ page.medium }}" title="Read '{{ page.title }}' on Medium.">
 	<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
 	{% if page.time %}<span class="time">&#160;· {{ page.time }} min read</span>{% endif %}
 </a>

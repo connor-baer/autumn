@@ -4,7 +4,7 @@ layout: default
 
 <article class="content">
   <header class="header">
-    <a name="{{ page.title }}"><h1 class="header-title">{{ page.title }}</h1></a>
+    <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% if page.image %}
       <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}-large.jpg')"></div>
     {% endif %}

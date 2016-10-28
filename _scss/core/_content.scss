@@ -2,6 +2,14 @@
 
 // Style the page and post content here.
 
+// 1. Header
+// 2. Body styles
+// 3. Social sharing
+// 4. Next post
+// 5. Related posts
+
+// 1. Header //
+
 .content {
   @include ctnr(three);
 }
@@ -20,10 +28,18 @@
   fill: palette($primary);
 }
 
+.content-author {
+  @include ctnr(one);
+
+  margin-top: 1rem;
+}
+
+// 2. Body styles //
+
 .content-style {
   @include clearfix;
 
-  margin: 2.5rem 0 4rem;
+  margin: 3rem 0 4rem;
 
   h1 {
     @include ctnr(one);
@@ -52,8 +68,13 @@
 
     margin-top: .5rem;
     margin-bottom: .5rem;
+    clear: right;
     font-family: $serif;
     font-weight: $serif-normal;
+
+    a {
+      font-weight: $serif-bold;
+    }
   }
 
   ul,
@@ -79,42 +100,40 @@
     list-style: disc;
   }
 
-  blockquote {
+  blockquote:not(.sidebar) {
     @include ctnr(full);
 
     @include font(quote);
 
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-    clear: both;
   }
 
-  .blockquote {
-    @include ctnr(two);
+  blockquote.sidebar {
+    @include ctnr(one);
 
     @include font(body);
 
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: .5rem;
     margin-bottom: 1.5rem;
+    clear: right;
     color: palette(gray);
     font-family: $serif;
-    font-style: italic;
     font-weight: $serif-normal;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -1rem;
-      width: 3px;
-      height: 100%;
-      background-color: palette(gray, light);
-      content: "";
+    @include mappy-query(phone) {
+      margin-top: 4rem;
+    }
 
-      @include mappy-query(tablet) {
-        left: 1rem;
-      }
+
+    &::before {
+      @include font(quote);
+
+      position: absolute;
+      top: -3rem;
+      color: palette($primary);
+      content: "“";
     }
   }
 
@@ -128,34 +147,36 @@
     font-size: ms(-1);
     font-style: normal;
     font-weight: $serif-normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+    &::before {
+      content: "— ";
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    // Make sure images are scaled correctly.
+    vertical-align: middle;
   }
 
   figure {
     clear: both;
 
-    img {
-      width: 100%;
-      height: auto;
+    &.sidebar {
+      @include ctnr(one);
 
-      // Make sure images are scaled correctly.
-      vertical-align: middle;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
-    &.full {
+    &:not(.sidebar) {
       @include ctnr(full);
 
       padding-top: 2.5rem;
       padding-bottom: 2rem;
       text-align: center;
-    }
-
-    &.side {
-      @include ctnr(one);
-
-      padding-top: 1rem;
-      padding-bottom: 1rem;
     }
   }
 
@@ -166,46 +187,126 @@
     color: palette(gray);
     font-size: ms(-1);
   }
+}
 
-  div {
-    @include ctnr(full);
+// 3. Social sharing //
+
+.share {
+  @include ctnr(two);
+
+  margin-top: 1.5rem;
+}
+
+.share-text {
+  @include font(body);
+
+  color: palette(gray);
+  font-size: ms(-1);
+}
+
+.share-icon {
+  margin-right: 1rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: fill $short;
+    vertical-align: middle;
+    fill: palette(gray);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: palette($primary);
   }
 }
 
-.content-related {
+// 4. Next post //
+
+.next {
+  @include ctnr(one);
+
+  display: block;
+  position: relative;
+
+  @include mappy-query(phone) {
+    display: none;
+  }
+}
+
+.next-post {
+  position: absolute;
+  bottom: .5rem;
+  padding-right: 2rem;
+}
+
+h3.next-header {
+  @include font(body);
+
+  display: block;
+  width: auto;
+  max-width: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  float: none;
+  color: palette(gray);
+  font-size: ms(-1);
+  font-weight: $sans-normal;
+  line-height: 1;
+}
+
+.next-image {
+  margin: 1rem 0;
+  padding-bottom: 56.25%;
+  background: 50% 50% / cover;
+}
+
+.next-title a {
+  @include font(header3);
+
+  @include underline;
+}
+
+// 5. Related posts //
+
+.related {
   margin-top: 4rem;
-  margin-bottom: 4rem;
   background-color: palette(gray, lighter);
 
   h3 {
-    @include font(header1);
+    @include font(header2);
+  }
+}
+
+.related-wrapper {
+  @include ctnr(three);
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.related-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.related-post {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+
+  @include mappy-query(tablet) {
+    width: calc(33.33% - 1.25rem);
   }
 
-  div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1rem;
-  }
-
-  section {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-
-    @include mappy-query(tablet) {
-      width: calc(33.33% - 1.25rem);
-    }
-  }
 
   h4 {
     @include font(header3);
 
-    transition: color $short;
-
-    &:hover,
-    &:focus {
-      color: palette($primary);
+    a {
+      @include underline(gray, lighter);
     }
   }
 }

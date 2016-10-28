@@ -4,28 +4,56 @@ layout: default
 
 <article class="content">
   <header class="header">
-    <a name="{{ page.title }}"><h1 class="header-title">{{ page.title }}</h1></a>
+    <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% include core/date.html %}
     {% if page.image %}
-      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}-large.jpg')"></div>
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg')"></div>
     {% endif %}
   </header>
 
   <div class="content-style">
-    {{ content }}
-  </div>
+    <!-- <div class="content-author">
+      <img
+      	srcset="/assets/images/dog-large.jpg 2000w,
+      	        /assets/images/dog.jpg 1000w,
+      	        /assets/images/dog-small.jpg 500w"
+        sizes="(min-width: 769px): calc(100vw - 8rem), calc(100vw - 4rem)"
+      	src="/assets/images/dog.jpg"
+      	alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork.">
+      <p>{{ site.author.bio }}</p>
+      <p><a href="https://twitter.com/{{ site.author.twitter }}">Follow on Twitter</a></p>
+    </div> -->
 
-  {% if site.related_posts != empty %}
-  <aside class="content-related">
-    <h3>Related Posts</h3>
-    <div>
-      {% for page in site.related_posts limit:3 %}
-        <section>
-          <a href="{{ site.baseurl }}{{ page.url }}"><h4>{{ page.title }}</h4></a>
-          {% include core/date.html %}
-        </section>
-      {% endfor %}
-    </div>
-  </aside>
-  {% endif %}
+    {{ content }}
+
+    {% include core/share.html %}
+
+    {% if page.next.url %}
+    <aside class="next">
+      <article class="next-post">
+        <h3 class="next-header">Next post:</h3>
+        {% if page.next.image %}
+        <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
+        {% endif %}
+        <h4 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h4>
+      </article>
+    </aside>
+    {% endif %}
+  </div>
 </article>
+
+{% if site.related_posts != empty %}
+<aside class="related">
+  <div class="related-wrapper">
+  <h3>Related Posts</h3>
+  <div class="related-posts">
+    {% for page in site.related_posts limit:3 %}
+      <section class="related-post">
+        <h4><a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h4>
+        {% include core/date.html %}
+      </section>
+    {% endfor %}
+  </div>
+</div>
+</aside>
+{% endif %}
