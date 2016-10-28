@@ -5,7 +5,6 @@ highlighter:          rouge
 
 # Gems
 gems:
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
   - jekyll-redirect-from
@@ -13,51 +12,50 @@ gems:
 
 
 # Settings
-color:                '#fff'
-exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile]
+color:                '#000'
+exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile]
 permalink:            /:title/
 
 
 # Site meta
-title:                'Change.'
-tagline:              'Change is a minimalist Jekyll theme built by @connor_baer.'
+title:                'Change'
+tagline:              'Embrace change.'
+description:          'Change is a minimalist Jekyll theme built by <a href="http://connorbaer.io/" title="Follow Connor Bär on Twitter.">Connor Bär</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-description:          'Change is a minimalist Jekyll theme built by @connor_baer.'
 url:                  http://change.connorbaer.io
 baseurl:              ''
+assets:               /assets
+images:               /images/
 logo:                 /assets/icons/apple-icon-144x144.png
-twitter:
-  username:           connor_baer
-facebook:
-  app_id:             169140053203395
-
-# google_analytics_key: UA-37412525-4 
-# google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
   name:               Connor Bär
+  bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
+  image:              author
   url:                http://connorbaer.io
   email:              hello@connorbaer.io
   twitter:            connor_baer
 
 social:
-  name:               Connor Bär
-  links:              
-    - https://twitter.com/connor_baer
-    - https://instagram.com/connor_baer
-    - https://github.com/connor-baer
-    - https://medium.com/@connor_baer
-    - https://www.snapchat.com/add/connor_baer
+  twitter:            https://twitter.com/connor_baer
+  instagram:          https://instagram.com/connor_baer
+  github:             https://github.com/connor-baer/change
+  medium:             https://blog.connorbaer.io
 
-nav:
-  1. about:           '/#about'
-  2. blog:            '/#blog'
-  3. Use:             '/#use'
-
-mobile: 
-  about:           '/#about'
-
-version:              2.0.0
+version:              3.1
 
 github:
   repo:               https://github.com/connor-baer/change
+
+
+# Integrations
+typekit:              rnf3gir
+
+# google_fonts:
+#   name:             weights
+
+# google_analytics_key: UA-37412525-4
+# google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
+
+facebook:
+  app_id:             169140053203395

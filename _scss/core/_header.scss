@@ -1,0 +1,55 @@
+// ==== HEADER ==== //
+
+// Style the header here.
+
+.header-title {
+  @include font(title);
+
+  margin: 4rem 0 1rem;
+}
+
+.header-icons {
+  margin-bottom: 4rem;
+}
+
+.header-icon {
+  margin-right: 1rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: fill $short;
+    fill: palette(gray);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: palette($primary);
+  }
+}
+
+.header-image {
+  width: 100%;
+  margin: 4rem 0 3rem;
+  padding-bottom: 56.25%;
+  background: 50% 50% / cover;
+}
+
+.header-svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 24rem;
+  max-width: 80%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+.header-text {
+  font-family: $sans;
+  font-size: 56px;
+  font-weight: $sans-bold;
+}

@@ -1,0 +1,50 @@
+// ==== NAVIGATION ==== //
+
+// Style the navigation here.
+
+// 1. Container
+// 2. Elements
+
+// 1. Container //
+
+.navigation-wrapper {
+  display: block;
+  list-style: none;
+  text-align: right;
+}
+
+// 2. Elements //
+
+.navigation-link {
+  @include underline;
+
+  color: palette(gray);
+  font-family: $sans;
+  font-size: 16px;
+  font-weight: $sans-semibold;
+  letter-spacing: 0.5px;
+  vertical-align: bottom;
+
+  &:hover {
+    color: palette($primary);
+  }
+
+  // Light theme
+  .metabar.-light & {
+    color: palette(white);
+  }
+
+  .metabar.-light &:hover {
+    color: palette($primary);
+  }
+}
+
+.navigation-active {
+  color: palette(gray, dark);
+}
+
+.navigation-item {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0;
+}

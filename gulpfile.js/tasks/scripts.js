@@ -1,9 +1,9 @@
 // ==== SCRIPTS ==== //
 
-var gulp        = require('gulp')
-  , plugins     = require('gulp-load-plugins')({ camelize: true })
-  , merge       = require('merge-stream')
-  , config      = require('../../gulpconfig').scripts
+var gulp  = require('gulp'),
+  plugins = require('gulp-load-plugins')({ camelize: true }),
+  merge   = require('merge-stream'),
+  config  = require('../../gulpconfig').scripts
 ;
 
 // Check core scripts for errors
@@ -24,7 +24,7 @@ gulp.task('scripts-bundle', ['scripts-lint'], function(){
       var chunks = [];
 
       // Iterate through each bundle and mash the chunks together
-      config.bundles[bundle].forEach(function(chunk){
+      config.bundles[bundle].forEach(function(chunk) {
         chunks = chunks.concat(config.chunks[chunk]);
       });
 

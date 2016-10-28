@@ -1,0 +1,343 @@
+// ==== CONTENT ==== //
+
+// Style the page and post content here.
+
+// 1. Header
+// 2. Body styles
+// 3. Social sharing
+// 4. Next post
+// 5. Related posts
+
+// 1. Header //
+
+.content {
+  @include ctnr(three);
+}
+
+.content-header {
+  @include ctnr(two);
+
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.content-icon {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  fill: palette($primary);
+}
+
+.content-author {
+  @include ctnr(one);
+
+  margin: .5rem 0 1rem;
+}
+
+.author-image {
+  width: 2rem;
+  height: 2rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+  float: left;
+  border-radius: 50%;
+  background: 50% 50% / cover;
+}
+
+.author-text {
+  width: calc(100% - 3rem);
+  float: left;
+
+  h4 {
+    @include font(header3);
+
+    font-size: ms(0);
+  }
+
+  p {
+    @include font(body);
+
+    color: palette(gray);
+    font-size: ms(-1);
+  }
+}
+
+// 2. Body styles //
+
+.content-style {
+  @include clearfix;
+
+  margin: 3rem 0 4rem;
+
+  h1 {
+    @include ctnr(one);
+
+    @include font(header1);
+  }
+
+  h2 {
+    @include ctnr(two);
+
+    @include font(header2);
+  }
+
+  h3 {
+    @include ctnr(two);
+
+    @include font(header3);
+  }
+
+  > p,
+  > ol,
+  > ul {
+    @include ctnr(two);
+
+    @include font(body);
+
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    clear: right;
+  }
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  > ol,
+  > ul {
+    padding-left: 3rem;
+  }
+
+  li > ol,
+  li > ul {
+    padding-bottom: 0;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  blockquote:not(.sidebar) {
+    @include ctnr(full);
+
+    @include font(quote);
+
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  blockquote.sidebar {
+    @include ctnr(one);
+
+    @include font(body);
+
+    position: relative;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    clear: both;
+    color: palette(gray);
+    font-family: $serif;
+    font-weight: $serif-normal;
+
+    @include mappy-query(phone) {
+      margin-top: 4rem;
+    }
+
+
+    &::before {
+      @include font(quote);
+
+      position: absolute;
+      top: -3rem;
+      color: palette($primary);
+      content: "“";
+    }
+  }
+
+  cite {
+    @include font(app);
+
+    display: block;
+    padding-top: 1rem;
+
+    &::before {
+      content: "— ";
+    }
+  }
+
+  a {
+    @include underline($txt-color: gray);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    // Make sure images are scaled correctly.
+    vertical-align: middle;
+  }
+
+  figure {
+    clear: both;
+
+    &.sidebar {
+      @include ctnr(one);
+
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &:not(.sidebar) {
+      @include ctnr(full);
+
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+  }
+
+  figcaption {
+    @include font(app);
+
+    margin-top: .5rem;
+  }
+}
+
+.post .content-style {
+  > p,
+  > ol,
+  > ul {
+    font-family: $serif;
+    font-weight: $serif-normal;
+
+    a {
+      font-weight: $serif-bold;
+    }
+  }
+
+  blockquote.sidebar {
+    font-family: $serif;
+    font-weight: $serif-normal;
+  }
+}
+
+// 3. Social sharing //
+
+.share {
+  @include ctnr(two);
+
+  margin-top: 1.5rem;
+}
+
+.share-text {
+  @include font(app);
+}
+
+.share-icon {
+  margin-right: 1rem;
+  text-shadow: none;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition: fill $short;
+    vertical-align: middle;
+    fill: palette(gray);
+  }
+
+  &:hover,
+  &:focus {
+    background: none;
+
+    svg {
+      fill: palette($primary);
+    }
+  }
+}
+
+// 4. Next post //
+
+.content-next {
+  @include ctnr(one);
+
+  display: block;
+  position: relative;
+
+  @include mappy-query(phone) {
+    display: none;
+  }
+}
+
+.next-post {
+  position: absolute;
+  bottom: .5rem;
+  padding-right: 2rem;
+}
+
+.next-header {
+  @include font(app);
+
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.next-image {
+  margin: 1rem 0;
+  padding-bottom: 56.25%;
+  background: 50% 50% / cover;
+}
+
+.next-title a {
+  @include font(header3);
+
+  @include underline;
+}
+
+// 5. Related posts //
+
+.content-related {
+  margin-top: 4rem;
+  background-color: palette(gray, lighter);
+
+  h3 {
+    @include font(header2);
+  }
+}
+
+.related-wrapper {
+  @include ctnr(three);
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.related-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.related-post {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+
+  @include mappy-query(tablet) {
+    width: calc(33.33% - 1.25rem);
+  }
+
+
+  h4 {
+    @include font(header3);
+
+    a {
+      @include underline(gray, lighter);
+    }
+  }
+}
