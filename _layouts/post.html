@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="content">
+<article class="content post">
   <header class="header">
     <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% include core/date.html %}
@@ -12,30 +12,30 @@ layout: default
   </header>
 
   <div class="content-style">
-    <!-- <div class="content-author">
-      <img
-      	srcset="/assets/images/dog-large.jpg 2000w,
-      	        /assets/images/dog.jpg 1000w,
-      	        /assets/images/dog-small.jpg 500w"
-        sizes="(min-width: 769px): calc(100vw - 8rem), calc(100vw - 4rem)"
-      	src="/assets/images/dog.jpg"
-      	alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork.">
-      <p>{{ site.author.bio }}</p>
-      <p><a href="https://twitter.com/{{ site.author.twitter }}">Follow on Twitter</a></p>
-    </div> -->
+    <div class="content-author">
+      {% if site.author.image %}
+        <a href="https://twitter.com/{{ site.author.twitter }}" title="Follow @{{ site.author.twitter }} on Twitter.">
+          <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
+        </a>
+      {% endif %}
+      <div class="author-text">
+        <h4><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
+        <p>{{ site.author.bio }}</p>
+      </div>
+    </div>
 
     {{ content }}
 
     {% include core/share.html %}
 
     {% if page.next.url %}
-    <aside class="next">
+    <aside class="content-next">
       <article class="next-post">
-        <h3 class="next-header">Next post:</h3>
+        <h4 class="next-header">Next post:</h4>
         {% if page.next.image %}
         <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
         {% endif %}
-        <h4 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h4>
+        <h5 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h5>
       </article>
     </aside>
     {% endif %}
@@ -43,7 +43,7 @@ layout: default
 </article>
 
 {% if site.related_posts != empty %}
-<aside class="related">
+<aside class="content-related">
   <div class="related-wrapper">
   <h3>Related Posts</h3>
   <div class="related-posts">

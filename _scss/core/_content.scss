@@ -31,7 +31,35 @@
 .content-author {
   @include ctnr(one);
 
-  margin-top: 1rem;
+  margin: .5rem 0 1rem;
+}
+
+.author-image {
+  width: 2rem;
+  height: 2rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+  float: left;
+  border-radius: 50%;
+  background: 50% 50% / cover;
+}
+
+.author-text {
+  width: calc(100% - 3rem);
+  float: left;
+
+  h4 {
+    @include font(header3);
+
+    font-size: ms(0);
+  }
+
+  p {
+    @include font(body);
+
+    color: palette(gray);
+    font-size: ms(-1);
+  }
 }
 
 // 2. Body styles //
@@ -69,12 +97,6 @@
     margin-top: .5rem;
     margin-bottom: .5rem;
     clear: right;
-    font-family: $serif;
-    font-weight: $serif-normal;
-
-    a {
-      font-weight: $serif-bold;
-    }
   }
 
   ul,
@@ -117,7 +139,7 @@
     position: relative;
     margin-top: .5rem;
     margin-bottom: 1.5rem;
-    clear: right;
+    clear: both;
     color: palette(gray);
     font-family: $serif;
     font-weight: $serif-normal;
@@ -138,19 +160,18 @@
   }
 
   cite {
-    @include font(body);
+    @include font(app);
 
     display: block;
     padding-top: 1rem;
-    color: palette(gray);
-    font-family: $serif;
-    font-size: ms(-1);
-    font-style: normal;
-    font-weight: $serif-normal;
 
     &::before {
       content: "— ";
     }
+  }
+
+  a {
+    @include underline($txt-color: gray);
   }
 
   img {
@@ -181,11 +202,27 @@
   }
 
   figcaption {
-    @include font(body);
+    @include font(app);
 
     margin-top: .5rem;
-    color: palette(gray);
-    font-size: ms(-1);
+  }
+}
+
+.post .content-style {
+  > p,
+  > ol,
+  > ul {
+    font-family: $serif;
+    font-weight: $serif-normal;
+
+    a {
+      font-weight: $serif-bold;
+    }
+  }
+
+  blockquote.sidebar {
+    font-family: $serif;
+    font-weight: $serif-normal;
   }
 }
 
@@ -198,14 +235,12 @@
 }
 
 .share-text {
-  @include font(body);
-
-  color: palette(gray);
-  font-size: ms(-1);
+  @include font(app);
 }
 
 .share-icon {
   margin-right: 1rem;
+  text-shadow: none;
 
   svg {
     width: 1rem;
@@ -215,15 +250,19 @@
     fill: palette(gray);
   }
 
-  &:hover svg,
-  &:focus svg {
-    fill: palette($primary);
+  &:hover,
+  &:focus {
+    background: none;
+
+    svg {
+      fill: palette($primary);
+    }
   }
 }
 
 // 4. Next post //
 
-.next {
+.content-next {
   @include ctnr(one);
 
   display: block;
@@ -240,19 +279,11 @@
   padding-right: 2rem;
 }
 
-h3.next-header {
-  @include font(body);
+.next-header {
+  @include font(app);
 
   display: block;
-  width: auto;
-  max-width: none;
-  margin-bottom: 1rem;
-  padding-left: 0;
-  float: none;
-  color: palette(gray);
-  font-size: ms(-1);
-  font-weight: $sans-normal;
-  line-height: 1;
+  margin-bottom: .5rem;
 }
 
 .next-image {
@@ -269,7 +300,7 @@ h3.next-header {
 
 // 5. Related posts //
 
-.related {
+.content-related {
   margin-top: 4rem;
   background-color: palette(gray, lighter);
 

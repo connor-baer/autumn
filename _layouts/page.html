@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<article class="content">
+<article class="content page">
   <header class="header">
     <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% if page.image %}
-      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}-large.jpg')"></div>
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg')"></div>
     {% endif %}
   </header>
 
   <div class="content-style">
     {{ content }}
+
+    {% include core/share.html %}
   </div>
 </article>

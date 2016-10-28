@@ -27,12 +27,11 @@ baseurl:              ''
 assets:               /assets
 images:               /images/
 logo:                 /assets/icons/apple-icon-144x144.png
-twitter:
-  username:           connor_baer
 
 author:
   name:               Connor Bär
   bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
+  image:              author
   url:                http://connorbaer.io
   email:              hello@connorbaer.io
   twitter:            connor_baer

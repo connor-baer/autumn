@@ -43,7 +43,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
     padding-left: 2rem;
 
     @include mappy-query(desktop) {
-      max-width: 1160px;
+      max-width: 58rem;
       margin-right: auto;
       margin-left: auto;
       padding-right: 4rem;
@@ -58,7 +58,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
 
     @include mappy-query(tablet) {
       width: 70%;
-      max-width: 700px;
+      max-width: 35rem;
       padding-left: 2rem;
       float: right;
     }
@@ -71,7 +71,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
 
     @include mappy-query(tablet) {
       width: 30%;
-      max-width: 300px;
+      max-width: 15rem;
       padding-right: 2rem;
       float: left;
     }
