@@ -15,7 +15,8 @@ $sans-bold: 700;
 
 $serif: "freight-text-pro", "Freight Text Pro", "Times New Roman", Times, serif;
 $serif-normal: 400;
-$serif-bold: 700;
+$serif-semibold: 600;
+$serif-bold: 900;
 
 $code: "Courier New", Courier, monospace;
 
@@ -81,6 +82,10 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
     a {
       background-size: .05em 2px, .05em 2px, 2px 2px;
     }
+
+    .serif & {
+      font-weight: $serif-bold;
+    }
   }
   @else if $style == "header1" {
     margin-top: .15rem;
@@ -98,6 +103,10 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
       background-color: palette($primary);
       content: "";
     }
+
+    .serif & {
+      font-weight: $serif-bold;
+    }
   }
   @else if $style == "header2" {
     display: inline;
@@ -110,6 +119,10 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
     a {
       background-size: .05em 2px, .05em 2px, 2px 2px;
     }
+
+    .serif & {
+      font-weight: $serif-bold;
+    }
   }
   @else if $style == "header3" {
     display: inline;
@@ -119,13 +132,32 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
     font-size: ms(1);
     font-weight: $sans-bold;
     line-height: 1.25;
+
+    .serif & {
+      font-weight: $serif-bold;
+    }
   }
   @else if $style == "body" {
-    font-family: $sans;
-    font-weight: $sans-normal;
-
     a {
       font-weight: $sans-semibold;
+    }
+
+    .serif & a {
+      font-weight: $serif-semibold;
+    }
+  }
+  @else if $style == "quote" {
+    color: palette(gray, dark);
+    font-size: ms(5);
+    line-height: 1.4;
+
+    a {
+      background-size: .05em 2px, .05em 2px, 2px 2px;
+      font-weight: $sans-bold;
+    }
+
+    .serif & a {
+      font-weight: $sans-bold;
     }
   }
   @else if $style == "app" {
@@ -133,18 +165,6 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
     font-family: $sans;
     font-size: ms(-1);
     font-weight: $sans-normal;
-  }
-  @else if $style == "quote" {
-    color: palette(gray, dark);
-    font-family: $serif;
-    font-size: ms(5);
-    font-weight: $serif-normal;
-    line-height: 1.4;
-
-    a {
-      background-size: .05em 2px, .05em 2px, 2px 2px;
-      font-weight: $serif-bold;
-    }
   }
   @else {
     @warn "Mixin font() received invalid input! This style does not exist.";
@@ -162,8 +182,6 @@ html {
   @include typi-base;
 
   background-color: palette(gray, darker);
-  font-family: $sans;
-  font-weight: $sans-normal;
   word-wrap: break-word;
   box-sizing: border-box;
 }
@@ -180,7 +198,14 @@ body {
   min-height: 100vh;
   background-color: palette(white);
   color: palette(gray, darker);
+  font-family: $sans;
+  font-weight: $sans-normal;
   overflow-x: hidden;
+
+  &.serif {
+    font-family: $serif;
+    font-weight: $serif-normal;
+  }
 }
 
 // Limits width on large screens and centers content.
@@ -251,10 +276,16 @@ big {
 }
 
 hr {
-  height: 1px;
   margin: 1rem 0;
   border: 0;
-  background-color: palette(gray, light);
+  box-sizing: border-box;
+
+  &::after {
+    width: 100%;
+    height: 2px;
+    background-color: palette(gray, light);
+    content: "";
+  }
 }
 
 .date {

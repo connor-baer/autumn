@@ -11,8 +11,8 @@
 $primary: red;
 $secondary: orange;
 
-$black: #000;
-$white: #fff;
+$black: #fff;
+$white: #122436;
 
 // 2. Color transformations //
 
@@ -29,11 +29,11 @@ $_palettes: (
     dark: $white
   ),
   gray: (
-  lighter: $oc-gray-1,
-  light:   $oc-gray-3,
-  base:    $oc-gray-6,
-  dark:    $oc-gray-8,
-  darker:  $oc-gray-9
+  lighter: $oc-gray-9,
+  light:   $oc-gray-8,
+  base:    $oc-gray-5,
+  dark:    $oc-gray-3,
+  darker:  $oc-gray-1
   ),
   red: (
     lighter: $oc-red-2,
