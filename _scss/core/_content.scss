@@ -170,10 +170,6 @@
     }
   }
 
-  a {
-    @include underline($txt-color: gray);
-  }
-
   img {
     width: 100%;
     height: auto;
@@ -204,7 +200,22 @@
   figcaption {
     @include font(app);
 
-    margin-top: .5rem;
+    margin-top: 1rem;
+  }
+
+  hr {
+    @include ctnr(two);
+
+    position: relative;
+    left: 0;
+
+    @include mappy-query(tablet) {
+      left: 2rem;
+    }
+
+    @include mappy-query(desktop) {
+      left: 4rem;
+    }
   }
 }
 

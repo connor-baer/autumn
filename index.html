@@ -2,9 +2,7 @@
 layout: default
 lang: en
 ref: index
-title: Embrace change.
-image: 'dog'
-theme: dark
+image: true
 ---
 <article class="content">
   <header class="header">
@@ -29,7 +27,9 @@ theme: dark
 				</svg>
 			</a>
     </div>
-    <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.image }}-large.jpg') 2x )">
+    {% if page.image %}
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )">
+    {% endif %}
     </div>
   </header>
 
@@ -54,3 +54,5 @@ theme: dark
       <a class="section-link" href="{{ site.social.medium }}">Read more on Medium</a>
     </article>
   </section>
+
+</article>

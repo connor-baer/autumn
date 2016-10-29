@@ -7,19 +7,19 @@ layout: default
     <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% include core/date.html %}
     {% if page.image %}
-      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg')"></div>
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )">
     {% endif %}
   </header>
 
   <div class="content-style">
     <div class="content-author">
       {% if site.author.image %}
-        <a href="https://twitter.com/{{ site.author.twitter }}" title="Follow @{{ site.author.twitter }} on Twitter.">
+        <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" title="Follow @{{ site.author.twitter }} on Twitter.">
           <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
         </a>
       {% endif %}
       <div class="author-text">
-        <h4><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
+        <h4><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" title="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
         <p>{{ site.author.bio }}</p>
       </div>
     </div>
@@ -31,7 +31,7 @@ layout: default
     {% if page.next.url %}
     <aside class="content-next">
       <article class="next-post">
-        <h4 class="next-header">Next post:</h4>
+        <h4 class="next-header">Next Up:</h4>
         {% if page.next.image %}
         <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
         {% endif %}
