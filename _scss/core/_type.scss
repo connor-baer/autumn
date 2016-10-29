@@ -133,7 +133,6 @@ $typi: (null: (12px, 1.75), x-small: 16px, medium: 20px, x-large: 24px);
     font-family: $sans;
     font-size: ms(-1);
     font-weight: $sans-normal;
-    line-height: 1.25;
   }
   @else if $style == "quote" {
     color: palette(gray, dark);

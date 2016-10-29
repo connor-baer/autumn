@@ -4,6 +4,7 @@
 
 // 1. Container
 // 2. Elements
+// 3. Turbolinks
 
 // 1. Container //
 
@@ -47,4 +48,11 @@
   display: inline-block;
   margin-left: 2rem;
   padding: 0;
+}
+
+// 3. Turbolinks
+
+.turbolinks-progress-bar {
+  height: 4px;
+  background-color: palette($primary);
 }
