@@ -1,5 +1,6 @@
 ---
 layout: default
+font: serif
 ---
 
 <article class="content post">
@@ -7,7 +8,7 @@ layout: default
     <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
     {% include core/date.html %}
     {% if page.image %}
-      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )">
+      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
     {% endif %}
   </header>
 
@@ -31,7 +32,7 @@ layout: default
     {% if page.next.url %}
     <aside class="content-next">
       <article class="next-post">
-        <h4 class="next-header">Next Up:</h4>
+        <h4 class="next-header">Next Post</h4>
         {% if page.next.image %}
         <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
         {% endif %}

@@ -51,14 +51,13 @@
   h4 {
     @include font(header3);
 
+    font-family: $sans;
     font-size: ms(0);
+    font-weight: $sans-bold;
   }
 
   p {
-    @include font(body);
-
-    color: palette(gray);
-    font-size: ms(-1);
+    @include font(app);
   }
 }
 
@@ -141,8 +140,6 @@
     margin-bottom: 1.5rem;
     clear: both;
     color: palette(gray);
-    font-family: $serif;
-    font-weight: $serif-normal;
 
     @include mappy-query(phone) {
       margin-top: 4rem;
@@ -205,35 +202,6 @@
 
   hr {
     @include ctnr(two);
-
-    position: relative;
-    left: 0;
-
-    @include mappy-query(tablet) {
-      left: 2rem;
-    }
-
-    @include mappy-query(desktop) {
-      left: 4rem;
-    }
-  }
-}
-
-.post .content-style {
-  > p,
-  > ol,
-  > ul {
-    font-family: $serif;
-    font-weight: $serif-normal;
-
-    a {
-      font-weight: $serif-bold;
-    }
-  }
-
-  blockquote.sidebar {
-    font-family: $serif;
-    font-weight: $serif-normal;
   }
 }
 

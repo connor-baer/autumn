@@ -26,7 +26,8 @@
   letter-spacing: 0.5px;
   vertical-align: bottom;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: palette($primary);
   }
 
