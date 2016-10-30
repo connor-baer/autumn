@@ -6,21 +6,62 @@
   @include ctnr(three);
   @include clearfix;
 
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-logo {
+  @include ctnr(one);
+
+  display: inline-block;
+  margin-top: 2.5rem;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    transition: fill $short;
+    fill: palette(gray, darker);
+
+    &:hover,
+    &:focus {
+      fill: palette($primary);
+    }
+  }
+}
+
+.footer-navigation {
+  @include ctnr(two);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-title {
+  @include font(header3);
+
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: $sans;
+  font-weight: $sans-bold;
+}
+
+.footer-links {
+  display: block;
+  width: calc(50% - 2rem);
 }
 
 .footer-text {
   @include ctnr(two);
 
-  color: palette(gray);
-  font-family: $sans;
-  font-size: 16px;
-  font-weight: $sans-semibold;
-  letter-spacing: 0.5px;
+  @include font(app);
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: palette(gray, light);
 
   a {
-    transition: color $short;
+    color: palette(gray, light);
 
     &:hover,
     &:focus {

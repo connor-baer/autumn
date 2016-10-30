@@ -1,5 +1,6 @@
 {% capture html %}
-<ul class="navigation-wrapper">
+<nav>
+<ul class="nav">
 {% assign entries = site.pages | where:"lang", page.lang | sort: "order" %}
 {% for entry in entries %}
 	{% unless entry.exclude == true %}
@@ -8,12 +9,13 @@
     {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
 
     {% if current == include.context %}
-      <li class="navigation-item {% if page.url contains entry.url %} open{% endif %}">
-        <a class="navigation-link{% if page.url == entry.url %} navigation-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+      <li class="nav-link">
+        <a class="{% if page.url == entry.url %} nav-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}" aria-label="{{ entry.title }}">{{ entry.title }}</a>
       </li>
     {% endif %}
 
 	{% endunless %}
 {% endfor %}
 </ul>
+</nav>
 {% endcapture %}{{ html | strip_newlines | replace:'      ','' | replace:'    ','' | replace:'  ',' ' }}

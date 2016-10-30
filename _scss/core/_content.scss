@@ -31,7 +31,7 @@
 .content-author {
   @include ctnr(one);
 
-  margin: .5rem 0 1rem;
+  margin: 1rem 0;
 }
 
 .author-image {
@@ -72,6 +72,8 @@
     @include ctnr(one);
 
     @include font(header1);
+
+    margin-top: 1rem;
   }
 
   h2 {
@@ -93,8 +95,7 @@
 
     @include font(body);
 
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin: 1rem 0;
     clear: right;
   }
 
@@ -181,7 +182,7 @@
     &.sidebar {
       @include ctnr(one);
 
-      padding-top: 1rem;
+      padding-top: 1.5rem;
       padding-bottom: 1rem;
     }
 
@@ -210,7 +211,7 @@
 .share {
   @include ctnr(two);
 
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
 .share-text {
@@ -254,7 +255,7 @@
 
 .next-post {
   position: absolute;
-  bottom: .5rem;
+  bottom: 1rem;
   padding-right: 2rem;
 }
 
@@ -275,24 +276,29 @@
   @include font(header3);
 
   @include underline;
+
+  font-family: $sans;
+  font-weight: $sans-bold;
 }
 
 // 5. Related posts //
 
 .content-related {
   margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: palette(gray, lighter);
-
-  h3 {
-    @include font(header2);
-  }
 }
 
 .related-wrapper {
   @include ctnr(three);
 
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  h3 {
+    @include font(header2);
+
+    font-family: $sans;
+    font-weight: $sans-bold;
+  }
 }
 
 .related-posts {
@@ -314,6 +320,9 @@
 
   h4 {
     @include font(header3);
+
+    font-family: $sans;
+    font-weight: $sans-bold;
 
     a {
       @include underline(gray, lighter);

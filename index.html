@@ -47,7 +47,7 @@ image: true
     <article class="section-writing">
       {% assign posts = site.posts | sort: 'order' | where:"lang", page.lang | limit: 3 %}
       {% for page in posts %}
-      <h3 class="section-header"><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h3>
+      <h3 class="section-header"><a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h3>
         {% include core/date.html %}
         <p class="section-body">{{ page.excerpt | strip_html }}</p>
       {% endfor %}

@@ -2,14 +2,19 @@
 
 // Style the header here.
 
+.header {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
+}
+
 .header-title {
   @include font(title);
 
-  margin: 4rem 0 1rem;
-}
-
-.header-icons {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .header-icon {
@@ -30,9 +35,13 @@
 
 .header-image {
   width: 100%;
-  margin: 4rem 0 3rem;
+  margin-top: 4rem;
   padding-bottom: 56.25%;
   background: 50% 50% / cover;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
 }
 
 .header-svg {

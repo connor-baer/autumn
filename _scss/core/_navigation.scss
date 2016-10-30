@@ -8,50 +8,58 @@
 
 // 1. Container //
 
-.navigation-wrapper {
-  display: block;
+.nav {
   list-style: none;
-  text-align: right;
 }
 
 // 2. Elements //
 
-.navigation-link {
-  @include underline;
+.nav-link {
+  @include font(app);
 
-  color: palette(gray);
-  font-family: $sans;
-  font-size: 16px;
-  font-weight: $sans-semibold;
-  letter-spacing: 0.5px;
-  vertical-align: bottom;
+  a {
+    color: palette(gray);
 
-  &:hover,
-  &:focus {
-    color: palette($primary);
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
+}
+
+.nav-active {
+  color: palette(gray, darker);
+}
+
+// 3. Metabar //
+
+.metabar {
+  .nav {
+    display: block;
+    list-style: none;
+    text-align: right;
+  }
+
+  .nav-link {
+    display: inline-block;
+    height: 40px;
+    margin-left: 2rem;
+    padding: 0;
+    vertical-align: bottom;
   }
 
   // Light theme
-  .metabar.-light & {
+  &.-light .nav-link {
     color: palette(white);
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
   }
-
-  .metabar.-light &:hover {
-    color: palette($primary);
-  }
 }
 
-.navigation-active {
-  color: palette(gray, dark);
-}
-
-.navigation-item {
-  display: inline-block;
-  margin-left: 2rem;
-  padding: 0;
-}
-
-// 3. Turbolinks
+// 4. Turbolinks //
 
 .turbolinks-progress-bar {
   height: 4px;
