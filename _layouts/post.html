@@ -15,12 +15,12 @@ font: serif
   <div class="content-style">
     <div class="content-author">
       {% if site.author.image %}
-        <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" title="Follow @{{ site.author.twitter }} on Twitter.">
+        <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ site.author.twitter }} on Twitter.">
           <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
         </a>
       {% endif %}
       <div class="author-text">
-        <h4><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" title="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
+        <h4><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
         <p>{{ site.author.bio }}</p>
       </div>
     </div>
@@ -46,15 +46,15 @@ font: serif
 {% if site.related_posts != empty %}
 <aside class="content-related">
   <div class="related-wrapper">
-  <h3>Related Posts</h3>
-  <div class="related-posts">
-    {% for page in site.related_posts limit:3 %}
-      <section class="related-post">
-        <h4><a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h4>
-        {% include core/date.html %}
-      </section>
-    {% endfor %}
+    <h3>Related Posts</h3>
+    <div class="related-posts">
+      {% for page in site.related_posts limit:3 %}
+        <section class="related-post">
+          <h4><a href="{{ site.baseurl }}{{ page.url }}" aria-label="{{ page.title }}">{{ page.title }}</a></h4>
+          {% include core/date.html %}
+        </section>
+      {% endfor %}
+    </div>
   </div>
-</div>
 </aside>
 {% endif %}

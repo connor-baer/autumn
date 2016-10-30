@@ -26,10 +26,10 @@
 
   @include ctnr(three);
 
-  padding-top: 20px;
+  padding-top: 40px;
 
   @include mappy-query(tablet) {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 }
 
@@ -37,6 +37,7 @@
 
 .metabar-left {
   float: left;
+  line-height: 1;
 }
 
 .metabar-right {

@@ -12,7 +12,10 @@
   @include clearfix;
 
   margin-top: 4rem;
-  margin-bottom: 2rem;
+
+  @include mappy-query(tablet) {
+    margin-top: 6rem;
+  }
 
   > article {
     @include ctnr(two);
@@ -43,7 +46,7 @@
   @include font(body);
 
   margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   transition: color $short;
 
   a &:hover,
