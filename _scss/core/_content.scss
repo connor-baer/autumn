@@ -4,9 +4,8 @@
 
 // 1. Header
 // 2. Body styles
-// 3. Social sharing
-// 4. Next post
-// 5. Related posts
+// 3. Next post
+// 4. Related posts
 
 // 1. Header //
 
@@ -26,12 +25,6 @@
   width: 8rem;
   height: 8rem;
   fill: palette($primary);
-}
-
-.content-author {
-  @include ctnr(one);
-
-  margin: 1rem 0;
 }
 
 .author-image {
@@ -68,45 +61,66 @@
 
   margin: 3rem 0 4rem;
 
-  h1 {
-    @include ctnr(one);
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ol,
+  > ul,
+  > div:not(.sidebar):not(.full) {
+    @include ctnr(two);
+  }
 
+  h1 {
     @include font(header1);
 
     margin-top: 1rem;
   }
 
   h2 {
-    @include ctnr(two);
-
     @include font(header2);
   }
 
   h3 {
-    @include ctnr(two);
-
     @include font(header3);
   }
 
-  > p,
-  > ol,
-  > ul {
-    @include ctnr(two);
+  h4 {
+    @include font(header3);
 
+    color: palette($primary);
+  }
+
+  p:not(.message) {
     @include font(body);
+  }
 
+  > p {
     margin: 1rem 0;
     clear: right;
   }
 
+  p.message {
+    @include font(app);
+
+    margin: .5rem 0;
+  }
+
   ul,
   ol {
+    @include font(body);
+
     padding-left: 1rem;
   }
 
   > ol,
   > ul {
+    margin: 1rem 0;
     padding-left: 3rem;
+    clear: right;
   }
 
   li > ol,
@@ -204,43 +218,26 @@
   hr {
     @include ctnr(two);
   }
-}
 
-// 3. Social sharing //
-
-.share {
-  @include ctnr(two);
-
-  margin-top: 3rem;
-}
-
-.share-text {
-  @include font(app);
-}
-
-.share-icon {
-  margin-right: 1rem;
-  text-shadow: none;
-
-  svg {
-    width: 1rem;
-    height: 1rem;
-    transition: fill $short;
-    vertical-align: middle;
-    fill: palette(gray);
+  > div.full {
+    @include ctnr(full);
   }
 
-  &:hover,
-  &:focus {
-    background: none;
+  > div.sidebar {
+    @include ctnr(one);
 
-    svg {
-      fill: palette($primary);
-    }
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .share {
+    @include ctnr(two);
+
+    margin-top: 3rem;
   }
 }
 
-// 4. Next post //
+// 3. Next post //
 
 .content-next {
   @include ctnr(one);
@@ -281,7 +278,7 @@
   font-weight: $sans-bold;
 }
 
-// 5. Related posts //
+// 4. Related posts //
 
 .content-related {
   margin-top: 4rem;
@@ -290,7 +287,7 @@
   background-color: palette(gray, lighter);
 }
 
-.related-wrapper {
+.related-container {
   @include ctnr(three);
 
   h3 {

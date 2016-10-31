@@ -1,28 +1,32 @@
 <footer class="footer">
-		<a class="footer-logo" href="http://madebyconnor.io/{% if site.url == 'http://madebyconnor.io' and page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Visit 'Made by Connor.'">
+	<div class="footer-container">
+		<div class="footer-logo">
+			<a href="http://madebyconnor.io/{% if site.url == 'http://madebyconnor.io' and page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Visit 'Made by Connor.'">
 			{% include custom/logo.html %}
+		</div>
 		</a>
-	<div class="footer-navigation">
-		<div class="footer-links">
-			<h4 class="footer-title">{{ site.title }}</h4>
-				{% include core/navigation.html context="/" %}
+		<div class="footer-navigation">
+			<div class="footer-links">
+				<h4 class="footer-title">{{ site.title }}</h4>
+					{% include core/navigation.html context="/" %}
+			</div>
+			<div class="footer-links">
+				<h4 class="footer-title">Made by Connor</h4>
+				<nav>
+					<ul class="nav">
+						<li class="nav-link">
+							<a href="http://connorbaer.io/creating" target="_blank" rel="noopener noreferrer" aria-label="Creating">Creating</a>
+						</li>
+						<li class="nav-link">
+							<a href="http://connorbaer.io/writing" target="_blank" rel="noopener noreferrer" aria-label="Writing">Writing</a>
+						</li>
+						<li class="nav-link">
+							<a href="http://connorbaer.io/eating" target="_blank" rel="noopener noreferrer" aria-label="Eating">Eating</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<div class="footer-links">
-			<h4 class="footer-title">Made by Connor</h4>
-			<nav>
-				<ul class="nav">
-					<li class="nav-link">
-						<a href="http://connorbaer.io/creating" target="_blank" rel="noopener noreferrer" aria-label="Creating">Creating</a>
-					</li>
-					<li class="nav-link">
-						<a href="http://connorbaer.io/writing" target="_blank" rel="noopener noreferrer" aria-label="Writing">Writing</a>
-					</li>
-					<li class="nav-link">
-						<a href="http://connorbaer.io/eating" target="_blank" rel="noopener noreferrer" aria-label="Eating">Eating</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<h6 class="footer-text">© {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow {{ site.author.name }} on Twitter.">{{ site.author.name }}</a>. All rights reserved.</h6>
 	</div>
-	<h6 class="footer-text">{{ site.tagline }} © {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow {{ site.author.name }} on Twitter.">{{ site.author.name }}</a></h6>
 </footer>
