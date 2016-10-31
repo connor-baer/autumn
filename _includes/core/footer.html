@@ -1,10 +1,8 @@
 <footer class="footer">
 	<div class="footer-container">
 		<div class="footer-logo">
-			<a href="http://madebyconnor.io/{% if site.url == 'http://madebyconnor.io' and page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Visit 'Made by Connor.'">
-			{% include custom/logo.html %}
+			<a href="http://madebyconnor.io/{% if site.url == 'http://madebyconnor.io' and page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Visit 'Made by Connor.'">{% include custom/logo.html %}</a>
 		</div>
-		</a>
 		<div class="footer-navigation">
 			<div class="footer-links">
 				<h4 class="footer-title">{{ site.title }}</h4>
