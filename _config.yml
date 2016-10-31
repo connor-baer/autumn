@@ -13,7 +13,7 @@ gems:
 
 # Settings
 color:                '#000'
-exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile]
+exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
 permalink:            /:title/
 
 
