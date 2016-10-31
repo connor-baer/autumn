@@ -13,7 +13,7 @@ font: serif
   </header>
 
   <div class="content-style">
-    <div class="content-author">
+    <div class="content-author sidebar">
       {% if site.author.image %}
         <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ site.author.twitter }} on Twitter.">
           <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
@@ -45,7 +45,7 @@ font: serif
 
 {% if site.related_posts != empty %}
 <aside class="content-related">
-  <div class="related-wrapper">
+  <div class="related-container">
     <h3>Related Posts</h3>
     <div class="related-posts">
       {% for page in site.related_posts limit:3 %}

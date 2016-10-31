@@ -3,10 +3,14 @@
 // Style the footer here.
 
 .footer {
-  @include ctnr(three);
   @include clearfix;
 
-  margin-top: 2rem;
+  margin-top: 4rem;
+  border-top: 2px solid palette(gray, light);
+}
+
+.footer-container {
+  @include ctnr(three);
 }
 
 .footer-logo {
@@ -23,7 +27,7 @@
 
     &:hover,
     &:focus {
-      fill: palette($primary);
+      fill: palette(red);
     }
   }
 }
@@ -48,7 +52,7 @@
 
 .footer-links {
   display: block;
-  width: calc(50% - 2rem);
+  width: calc(50% - 1rem);
 }
 
 .footer-text {
@@ -56,7 +60,7 @@
 
   @include font(app);
 
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   color: palette(gray, light);
 
