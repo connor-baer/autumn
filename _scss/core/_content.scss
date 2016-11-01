@@ -254,13 +254,13 @@
   position: absolute;
   bottom: 1rem;
   padding-right: 2rem;
-}
 
-.next-header {
-  @include font(app);
+  .next-header {
+    @include font(app);
 
-  display: block;
-  margin-bottom: .5rem;
+    display: block;
+    margin-bottom: .5rem;
+  }
 }
 
 .next-image {
@@ -272,7 +272,7 @@
 .next-title a {
   @include font(header3);
 
-  @include underline;
+  @include underline();
 
   font-family: $sans;
   font-weight: $sans-bold;
