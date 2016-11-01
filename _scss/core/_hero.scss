@@ -1,8 +1,8 @@
-// ==== HEADER ==== //
+// ==== HERO ==== //
 
-// Style the header here.
+// Style the hero section here.
 
-.header {
+.hero {
   margin-top: 4rem;
   margin-bottom: 2rem;
 
@@ -11,13 +11,13 @@
   }
 }
 
-.header-title {
+.hero-title {
   @include font(title);
 
   margin-bottom: 1rem;
 }
 
-.header-icon {
+.hero-icon {
   margin-right: 1rem;
 
   svg {
@@ -33,7 +33,7 @@
   }
 }
 
-.header-image {
+.hero-image {
   width: 100%;
   margin-top: 4rem;
   padding-bottom: 56.25%;
@@ -44,7 +44,7 @@
   }
 }
 
-.header-svg {
+.hero-svg {
   display: block;
   position: absolute;
   top: 50%;
@@ -57,7 +57,7 @@
   transform: translateY(-50%);
 }
 
-.header-text {
+.hero-text {
   font-family: $sans;
   font-size: 56px;
   font-weight: $sans-bold;

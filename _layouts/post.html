@@ -4,11 +4,11 @@ font: serif
 ---
 
 <article class="content post">
-  <header class="header">
-    <a id="{{ page.title | url_encode }}"><h1 class="header-title">{{ page.title }}</h1></a>
+  <header class="hero">
+    <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
     {% include core/date.html %}
     {% if page.image %}
-      <div class="header-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
     {% endif %}
   </header>
 
