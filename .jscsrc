@@ -7,5 +7,6 @@
     "gulpconfig.js",
     "gulpfile.js/"
   ],
-  "requireVarDeclFirst": false
+  "requireVarDeclFirst": false,
+  "requireSpacesInAnonymousFunctionExpression": false
 }
