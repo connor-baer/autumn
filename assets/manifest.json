@@ -1,5 +1,12 @@
 {
- "name": "App",
+ "name": "Change is a minimalist Jekyll theme.",
+ "short_name": "Change",
+ "description": "Change is a minimalist Jekyll theme built by Connor Bär.",
+ "display": "fullscreen",
+ "orientation": "portrait-primary",
+ "start_url": "/",
+ "background_color": "#fa5252",
+ "theme_color": "#fa5252",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

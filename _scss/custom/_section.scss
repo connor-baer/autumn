@@ -59,6 +59,7 @@
   @include underline();
 
   font-weight: $sans-semibold;
+  cursor: pointer;
 
   &::after {
     content: " →";

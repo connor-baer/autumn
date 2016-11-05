@@ -106,9 +106,10 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
 
     &::after {
       display: block;
-      width: 4rem;
-      height: 0.33rem;
+      width: 2em;
+      height: 0.16em;
       margin-top: .5rem;
+      border-radius: 0.08em;
       background-color: palette($primary);
       content: "";
     }
