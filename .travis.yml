@@ -15,16 +15,13 @@ language: ruby
 matrix:
     fast_finish: true
 
-    gemfile:
-        - gemfile
-
     include:
         - rvm: '2.3.1'
-          env:
-              - SNIFF=1
+          gemfile: gemfile
+          env: SNIFF=1
         - rvm: 'ruby-head'
-          env:
-              - SNIFF=2
+          gemfile: gemfile
+          env: SNIFF=2
 
     allow_failures:
         - rvm: 'ruby-head'
