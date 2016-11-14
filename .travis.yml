@@ -35,10 +35,10 @@ matrix:
 before_script:
     # Install JSHint, a JavaScript Code Quality Tool.
     # @link http://jshint.com/docs/
-    - if [[ "$SNIFF" == "1" ]]; then npm install -g jshint
+    - if [[ "$SNIFF" == "1" ]]; then npm install -g jshint; fi
     # Install JSCS: JavaScript Code Style checker.
     # @link http://jscs.info/
-    - if [[ "$SNIFF" == "2" ]]; then npm install -g jscs
+    - if [[ "$SNIFF" == "2" ]]; then npm install -g jscs; fi
 
 # Run test script commands.
 # Default is specific to project language.
@@ -52,11 +52,11 @@ script:
     # Build the website.
     - bundle exec jekyll build
     # Run the website through JSHint.
-    - if [[ "$SNIFF" == "1" ]]; then jshint .
+    - if [[ "$SNIFF" == "1" ]]; then jshint .; fi
     # Run the website through JavaScript Code Style checker.
-    - if [[ "$SNIFF" == "2" ]]; then jscs .
+    - if [[ "$SNIFF" == "2" ]]; then jscs .; fi
     # Run the website through htmlproofer.
-    - if [[ "$SNIFF" == "2" ]]; then bundle exec htmlproofer ./_site --check-favicon --check-html
+    - if [[ "$SNIFF" == "2" ]]; then bundle exec htmlproofer ./_site --check-favicon --check-html; fi
 
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
