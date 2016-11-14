@@ -16,16 +16,15 @@ matrix:
     fast_finish: true
 
     include:
+        - rvm: '2.3.1'
+          env:
+              - SNIFF=1
         - rvm: 'ruby-head'
-          env: SNIFF=1
-        - rvm: '2.3'
           env:
               - SNIFF=2
-              # speeds up installation of html-proofer
-              - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
     allow_failures:
-        - rvm: '2.3'
+        - rvm: 'ruby-head'
 
 gemfile:
     - gemfile
