@@ -117,7 +117,7 @@ module.exports = {
 
   images: {
     optimize: {
-      src: [src + assets + 'images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `dist` since we are minifying images in place
+      src: [src + assets + 'images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `assets` since we are minifying images in place
       imagemin: {
         optimizationLevel: 5,
         progressive: true,
@@ -126,14 +126,13 @@ module.exports = {
       dest: src + assets + 'images/',
     },
     resize: {
-      src: [src + '_images/**/*(*.png|*.jpg|*.jpeg)'], // The source is actually `dist` since we are minifying images in place
+      src: [src + '_images/**/*(*.png|*.jpg|*.jpeg)'],
       responsive: {
         // Convert all images to JPEG format.
         '*': [{
           // image.jpg is 1000 pixels wide.
           width: 1000,
           withoutEnlargement: false,
-          normalize: true,
           rename: {
             extname: '.jpg',
           },
@@ -141,7 +140,6 @@ module.exports = {
           // image-large.jpg is 2000 pixels wide.
           width: 1000 * 2,
           withoutEnlargement: false,
-          normalize: true,
           rename: {
             suffix: '-large',
             extname: '.jpg',
@@ -150,7 +148,6 @@ module.exports = {
           // image-small.jpg is 500 pixels wide.
           width: 1000 / 2,
           withoutEnlargement: false,
-          normalize: true,
           rename: {
             suffix: '-small',
             extname: '.jpg',

@@ -1,21 +1,10 @@
-{% capture html %}
-<nav>
 <ul class="nav">
-{% assign entries = site.pages | where:"lang", page.lang | sort: "order" %}
+{% assign entries = site.pages | where: "lang", page.lang | sort: "order" %}
 {% for entry in entries %}
 	{% unless entry.exclude == true %}
-
-    {% capture slug %}{{ entry.url | split: "/" | last }}{% endcapture %}
-    {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
-
-    {% if current == include.context %}
-      <li class="nav-link">
-        <a class="{% if page.url == entry.url %} nav-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}" aria-label="{{ entry.title }}">{{ entry.title }}</a>
-      </li>
-    {% endif %}
-
+    <li class="nav-link">
+      <a class="{% if page.url == entry.url %} nav-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}" aria-label="{{ entry.title }}">{{ entry.title }}</a>
+    </li>
 	{% endunless %}
 {% endfor %}
 </ul>
-</nav>
-{% endcapture %}{{ html | strip_newlines | replace:'      ','' | replace:'    ','' | replace:'  ',' ' }}

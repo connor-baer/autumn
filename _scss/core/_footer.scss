@@ -17,16 +17,17 @@
   @include ctnr(one);
 
   display: inline-block;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 
   svg {
     width: 40px;
     height: 40px;
-    transition: fill $short;
+    transition: fill $short, transform $short;
     fill: palette(gray, darker);
 
     &:hover,
     &:focus {
+      transform: scale(1.1);
       fill: palette(red);
     }
   }

@@ -15,6 +15,20 @@ document.addEventListener('turbolinks:load', function () {
     offset: 64,
   });
 
+  // MOBILE MENU //
+
+  var menuOpen = document.getElementById('js-navOpen');
+  var menuClose = document.getElementById('js-navClose');
+  var metabarNav = document.getElementById('js-metabarNav');
+
+  menuOpen.addEventListener('click', function () {
+    metabarNav.classList.add('open');
+  });
+
+  menuClose.addEventListener('click', function () {
+    metabarNav.classList.remove('open');
+  });
+
   // EMBEDLY //
 
   var embeds = document.getElementsByClassName('embedly-card');

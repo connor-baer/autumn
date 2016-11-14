@@ -5,9 +5,13 @@
   <!-- Enable responsiveness on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <link href="http://gmpg.org/xfn/11" rel="profile"> {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %} {% for post in posts %}
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Link to page translations -->
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %} {% for post in posts %}
   <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" /> {% endfor %} {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %} {% for page in pages %}
-  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" /> {% endfor %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
 
   <title>
     {% if page.title %} {{ page.title }} · {{ site.title }} {% else %} {{ site.title }} · {{ site.tagline }} {% endif %}
@@ -47,6 +51,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="{{ site.color }}">
   <meta name="msapplication-TileImage" content="{{ site.baseurl }}{{ site.assets }}/icons/ms-icon-144x144.png">
+  <link rel="manifest" href="{{ site.baseurl }}{{ site.assets }}/manifest.json">
   <meta name="theme-color" content="{{ site.color }}">
   <link rel="shortcut icon" href="{{ site.baseurl }}{{ site.assets }}/icons/favicon.ico">
 
