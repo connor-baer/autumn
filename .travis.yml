@@ -12,8 +12,20 @@ language: ruby
 
 # Declare versions of Ruby to use. Use one decimal max.
 # @link http://docs.travis-ci.com/user/build-configuration/
-rvm:
-    - 2.3.1
+matrix:
+    fast_finish: true
+
+    include:
+        - rvm: 'ruby-head'
+          env: SNIFF=1
+        - rvm: '2.3'
+          env:
+              - SNIFF=2
+              # speeds up installation of html-proofer
+              - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+    allow_failures:
+        - rvm: '2.3'
 
 gemfile:
     - gemfile
@@ -22,12 +34,12 @@ gemfile:
 # e.g. copy database configurations, environment variables, etc.
 # Failures in this section will result in build status 'errored'.
 before_script:
-    # Install JSCS: JavaScript Code Style checker.
-    # @link http://jscs.info/
-    - npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool.
     # @link http://jshint.com/docs/
-    - npm install -g jshint
+    - if [[ "$SNIFF" == "1" ]]; then npm install -g jshint
+    # Install JSCS: JavaScript Code Style checker.
+    # @link http://jscs.info/
+    - if [[ "$SNIFF" == "2" ]]; then npm install -g jscs
 
 # Run test script commands.
 # Default is specific to project language.
@@ -41,20 +53,15 @@ script:
     # Build the website.
     - bundle exec jekyll build
     # Run the website through JSHint.
-    - jshint .
+    - if [[ "$SNIFF" == "1" ]]; then jshint .
     # Run the website through JavaScript Code Style checker.
-    - jscs .
+    - if [[ "$SNIFF" == "2" ]]; then jscs .
     # Run the website through htmlproofer.
-    - bundle exec htmlproofer ./_site --check-favicon --check-html
-
-env:
-    global:
-        # speeds up installation of html-proofer
-        - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - if [[ "$SNIFF" == "2" ]]; thenbundle exec htmlproofer ./_site --check-favicon --check-html
 
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
 notifications:
     email:
         email:
-            - admin@uwcblogs.com
+            - admin@connorbaer.io

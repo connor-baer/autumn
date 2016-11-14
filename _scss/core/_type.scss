@@ -231,6 +231,7 @@ body {
   color: palette(gray, darker);
   font-family: $sans;
   font-weight: $sans-normal;
+  font-feature-settings: "lnum", "salt";
   overflow-x: hidden;
 
   &.serif {
