@@ -45,6 +45,7 @@
   border-radius: .5rem;
   outline: none;
   background-color: palette(white);
+  font-family: $sans;
   resize: none;
 
   // Active state
@@ -123,6 +124,7 @@ textarea {
   left: 1rem;
   transition: $short;
   color: palette(gray);
+  font-family: $sans;
   pointer-events: none;
 }
 

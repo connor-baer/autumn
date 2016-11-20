@@ -13,17 +13,25 @@ font: serif
   </header>
 
   <div class="content-style">
-    <div class="content-author sidebar">
-      {% if site.author.image %}
-        <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ site.author.twitter }} on Twitter.">
+    <aside class="content-author">
+      {% if page.author %}
+        <a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">
+          <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.author.image }}-small.jpg')"></div>
+        </a>
+        <div class="author-text">
+          <h4><a {% if page.author.url %}href="{{ page.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ page.author.url }} on url.">{{ page.author.name }}</a></h4>
+          <p>{{ page.author.bio }}</p>
+        </div>
+      {% elsif site.author %}
+        <a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">
           <div class="author-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ site.author.image }}-small.jpg')"></div>
         </a>
+        <div class="author-text">
+          <h4><a {% if site.author.url %}href="{{ site.author.url }}"{% endif %} target="_blank" rel="noopener noreferrer">{{ site.author.name }}</a></h4>
+          <p>{{ site.author.bio }}</p>
+        </div>
       {% endif %}
-      <div class="author-text">
-        <h4><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow @{{ site.author.twitter }} on Twitter.">{{ site.author.name }}</a></h4>
-        <p>{{ site.author.bio }}</p>
-      </div>
-    </div>
+    </aside>
 
     {{ content }}
 

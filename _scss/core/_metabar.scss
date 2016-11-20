@@ -28,7 +28,7 @@
 
   padding-top: 40px;
 
-  @include mappy-query(tablet) {
+  @include mappy-query(desktop) {
     padding-top: 60px;
   }
 }

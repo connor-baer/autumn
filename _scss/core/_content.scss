@@ -219,11 +219,11 @@
     @include ctnr(two);
   }
 
-  > div.full {
+  > section {
     @include ctnr(full);
   }
 
-  > div.sidebar {
+  > aside {
     @include ctnr(one);
 
     padding-top: 1.5rem;
