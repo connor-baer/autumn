@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/change.git"
+    "url": "git+https://github.com/madebyconnor/change.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/connor-baer/change/issues"
+    "url": "https://github.com/madebyconnor/change/issues"
   },
-  "homepage": "http://change.connorbaer.io",
+  "homepage": "http://change.madebyconnor.co",
   "dependencies": {
     "open-color": "^1.4.0",
     "turbolinks": "^5.0.0"

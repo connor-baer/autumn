@@ -1,4 +1,4 @@
-# Travis CI (MIT License) configuration file for http://change.connorbaer.io.
+# Travis CI (MIT License) configuration file for http://change.madebyconnor.co.
 # @link https://travis-ci.org/
 
 # Ditch sudo and use containers.

@@ -25,10 +25,11 @@ title:                'Change'
 tagline:              'Embrace change.'
 description:          'Change is a minimalist Jekyll theme built by <a href="http://connorbaer.io/" title="Follow Connor Bär on Twitter.">Connor Bär</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-url:                  http://change.connorbaer.io
+url:                  http://change.madebyconnor.co
 baseurl:              ''
 assets:               /assets
 images:               /images/
+image:                index-large.jpg
 logo:                 /assets/icons/apple-icon-144x144.png
 
 author:
@@ -42,13 +43,13 @@ author:
 social:
   twitter:            https://twitter.com/connor_baer
   instagram:          https://instagram.com/connor_baer
-  github:             https://github.com/connor-baer/change
+  github:             https://github.com/madebyconnor/change
   medium:             https://blog.connorbaer.io
 
-version:              3.1
+version:              3.1.2
 
 github:
-  repo:               https://github.com/connor-baer/change
+  repo:               https://github.com/madebyconnor/change
 
 
 # Integrations
@@ -65,4 +66,4 @@ typekit:              fcv7rfe
 excerpt_separator: <!-- Read more -->
 
 navigation:
-  GitHub: https://github.com/connor-baer/change
+  GitHub: https://github.com/madebyconnor/change

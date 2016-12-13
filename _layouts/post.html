@@ -3,6 +3,8 @@ layout: default
 font: serif
 ---
 
+{% include core/metabar.html %}
+
 <article class="content post">
   <header class="hero">
     <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
@@ -66,3 +68,5 @@ font: serif
   </div>
 </aside>
 {% endif %}
+
+{% include core/footer.html %}

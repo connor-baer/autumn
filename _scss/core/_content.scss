@@ -2,10 +2,12 @@
 
 // Style the page and post content here.
 
+
 // 1. Header
 // 2. Body styles
 // 3. Next post
 // 4. Related posts
+
 
 // 1. Header //
 
@@ -53,6 +55,7 @@
     @include font(app);
   }
 }
+
 
 // 2. Body styles //
 
@@ -124,8 +127,12 @@
   > ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     clear: right;
+
+    @include mappy-query(tablet) {
+      padding-left: 3rem;
+    }
   }
 
   li > ol,
@@ -164,7 +171,6 @@
     @include mappy-query(phone) {
       margin-top: 4rem;
     }
-
 
     &::before {
       @include font(quote);
@@ -208,8 +214,8 @@
     &:not(.sidebar) {
       @include ctnr(full);
 
-      padding-top: 2.5rem;
-      padding-bottom: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
   }
@@ -261,6 +267,7 @@
   }
 }
 
+
 // 3. Next post //
 
 .content-next {
@@ -301,6 +308,7 @@
   font-family: $sans;
   font-weight: $sans-bold;
 }
+
 
 // 4. Related posts //
 
