@@ -30,7 +30,6 @@
     "modular-scale": "^2.1.3",
     "mappy-breakpoints": "^0.2.3",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.4",
-    "headroom.js": "https://npmcdn.com/headroom.js/bower.zip",
     "normalize-css": "^4.1.1"
   }
 }

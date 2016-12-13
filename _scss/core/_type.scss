@@ -30,7 +30,7 @@ $ms-ratio: 1.25;
 
 $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
 
-
+// 2. underline() //
 
 @mixin underline($bg-color: white, $bg-shade: base, $txt-color: $primary) {
   $selection-color: palette(blue, lighter);
@@ -60,7 +60,7 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
   }
 }
 
-// 2. font() //
+// 3. font() //
 
 // The font() function accepts a style parameter.
 // It is intended to promote consistency in the typography,
@@ -196,6 +196,7 @@ $typi: (null: (12px, 2), x-small: 16px, medium: 20px, x-large: 24px);
     font-size: ms(-1);
     font-weight: $sans-semibold;
     letter-spacing: 0.25px;
+    line-height: 1.5;
   }
   @else {
     @warn "Mixin font() received invalid input! This style does not exist.";
@@ -321,24 +322,16 @@ big {
 }
 
 hr {
-  margin: 1rem 0;
+  width: 100%;
+  height: 2px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 0;
+  background-color: palette(gray, light);
   box-sizing: border-box;
-
-  &::after {
-    width: 100%;
-    height: 2px;
-    background-color: palette(gray, light);
-    content: "";
-  }
 }
 
-.date {
-  display: block;
-}
-
-time,
-.time {
+time {
   @include font(app);
 
   display: inline-block;

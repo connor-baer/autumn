@@ -11,7 +11,12 @@
 $breakpoints: (x-small: 359px, small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
 
 // You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
-$mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desktop: mappy-bp(medium), desktop-large: mappy-bp(large));
+$mappy-queries: (
+  phone: mappy-bp(max-width small),
+  tablet: mappy-bp(small),
+  desktop: mappy-bp(medium),
+  desktop-large: mappy-bp(large)
+);
 
 // 2. Helpers //
 
@@ -26,6 +31,9 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
 // 3. ctnr() //
 
 // Content can take on four different widths: full, three, two and one.
+
+$container-width: 50rem;
+
 @mixin ctnr($width: null) {
   @if $width == null {
     @warn "Mixin ctnr() received no input! Please provide a width.";
@@ -38,16 +46,14 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
   }
   @else if $width == "three" {
     display: block;
-    width: 100%;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    width: auto;
+    max-width: calc(100% - 4rem);
+    margin-right: auto;
+    margin-left: auto;
 
     @include mappy-query(desktop) {
-      max-width: 58rem;
-      margin-right: auto;
-      margin-left: auto;
-      padding-right: 4rem;
-      padding-left: 4rem;
+      width: calc(100% - 8rem);
+      max-width: $container-width;
     }
   }
   @else if $width == "two" {
@@ -58,7 +64,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
 
     @include mappy-query(tablet) {
       width: 70%;
-      max-width: 35rem;
+      max-width: $container-width * 0.7;
       padding-left: 2rem;
       float: right;
     }
@@ -71,7 +77,7 @@ $mappy-queries: (phone: mappy-bp(max-width small), tablet: mappy-bp(small), desk
 
     @include mappy-query(tablet) {
       width: 30%;
-      max-width: 15rem;
+      max-width: $container-width * 0.3;
       padding-right: 2rem;
       float: left;
     }

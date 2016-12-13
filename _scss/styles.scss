@@ -6,6 +6,7 @@
 // For example, a form contains buttons; a menu can contain a form, etc.
 // Note: `bower_components` and `npm_modules` are already in Sass's path.
 
+
 // 1. Helpers //
 
 // Modular scale calculator built into your Sass, from http://www.modularscale.com/.
@@ -16,6 +17,7 @@
 
 // Mappy Breakpoints: a breakpoint mixin that uses Sass maps, from https://github.com/zellwk/mappy-breakpoints.
 @import "mappy-breakpoints/mappy-breakpoints";
+
 
 // 2. Dependencies //
 
@@ -28,6 +30,7 @@
 // Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/.
 @import "core/reset";
 
+
 // 3. Authored dependencies //
 
 @import "core/animation";
@@ -35,10 +38,12 @@
 @import "custom/color";
 @import "core/type";
 
+
 // 4. Patters //
 
 @import "core/form";
 @import "core/syntax";
+
 
 // 5. Sections //
 
@@ -47,5 +52,5 @@
 @import "core/hero";
 @import "custom/section";
 @import "core/content";
-@import "core/share";
+@import "core/meta";
 @import "core/footer";

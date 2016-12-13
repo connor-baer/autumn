@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/change.git"
+    "url": "git+https://github.com/madebyconnor/change.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/connor-baer/change/issues"
+    "url": "https://github.com/madebyconnor/change/issues"
   },
-  "homepage": "http://change.connorbaer.io",
+  "homepage": "http://change.madebyconnor.co",
   "dependencies": {
     "open-color": "^1.4.0",
     "turbolinks": "^5.0.0"
@@ -44,7 +44,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-responsive": "^2.6.0",
     "gulp-ruby-sass": "^2.1.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-update": "0.0.2",

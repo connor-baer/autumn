@@ -17,9 +17,10 @@ module.exports = {
 
   browsersync: {
     server: {
-      baseDir: dist,
+      baseDir: src + dist,
     },
-    files: [dist + '**/*'], port: 4000, // Port number for the live version of the site; jekyll default: 4000
+    files: [src + dist + '**/*'],
+    port: 4000, // Port number for the live version of the site; jekyll default: 4000
     notify: false, // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
     ui: false, // Set to false if you don't need the browsersync UI
     open: false, // Set to false if you don't like the browser window opening automatically
@@ -40,7 +41,7 @@ module.exports = {
       src + '*.{html,md,yml,yaml,txt}',
       '!' + modules,
       '!' + bower,
-      '!' + dist,
+      '!' + src + dist,
     ],
     styles:  src + '_scss/**/*.scss',
     scripts: src + '_js/*.js',
@@ -48,7 +49,7 @@ module.exports = {
   },
 
   clean: {
-    src: [dist + assets],
+    src: [src + dist + assets],
   },
 
   update: {
@@ -66,13 +67,15 @@ module.exports = {
 
   jekyll: {
     src:    src,
-    dest:   dist,
+    dest:   src + dist,
     config: '_config.yml',
   },
 
   styles: {
     build: {
-      src: src + '_scss/**/*.scss', dest: assets, dist: dist,
+      src: src + '_scss/**/*.scss',
+      dest: assets,
+      dist: src + dist,
     },
     cssnano: {
       autoprefixer: {
@@ -111,7 +114,7 @@ module.exports = {
       src: assets + '**/*.js',
       uglify: {}, // Default options
       dest: assets,
-      dist: dist,
+      dist: src + dist,
     },
   },
 
@@ -152,7 +155,7 @@ module.exports = {
             suffix: '-small',
             extname: '.jpg',
           },
-        },],
+        }, ],
       },
       dest: src + assets + 'images/',
     },

@@ -5,6 +5,9 @@ ref: index
 image: true
 exclude: true
 ---
+
+{% include core/metabar.html %}
+
 <article class="content">
 
   <header class="hero">
@@ -38,7 +41,7 @@ exclude: true
     <h2 class="section-title">About</h2>
     <article>
       <h3 class="section-header">Made by Connor.</h3>
-      <p class="section-body">{{ site.description }} It serves as the foundation for all my websites. You are free to use it under the <a href="https://github.com/connor-baer/change/blob/beta/LICENSE.md">MIT license</a>.</p>
+      <p class="section-body">{{ site.description }} It serves as the foundation for all my websites. You are free to use it under the <a href="https://github.com/madebyconnor/change/blob/beta/LICENSE.md">MIT license</a>.</p>
       <a class="section-link" href="{{ site.github.repo }}">Fork on GitHub</a>
     </article>
   </section>
@@ -57,3 +60,5 @@ exclude: true
   </section>
 
 </article>
+
+{% include core/footer.html %}
