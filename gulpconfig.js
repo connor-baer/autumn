@@ -19,7 +19,8 @@ module.exports = {
     server: {
       baseDir: src + dist,
     },
-    files: [src + dist + '**/*'], port: 4000, // Port number for the live version of the site; jekyll default: 4000
+    files: [src + dist + '**/*'],
+    port: 4000, // Port number for the live version of the site; jekyll default: 4000
     notify: false, // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
     ui: false, // Set to false if you don't need the browsersync UI
     open: false, // Set to false if you don't like the browser window opening automatically
@@ -154,7 +155,7 @@ module.exports = {
             suffix: '-small',
             extname: '.jpg',
           },
-        },],
+        }, ],
       },
       dest: src + assets + 'images/',
     },

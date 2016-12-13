@@ -17,13 +17,14 @@
 // Mappy Breakpoints: a breakpoint mixin that uses Sass maps, from https://github.com/zellwk/mappy-breakpoints.
 @import "mappy-breakpoints/mappy-breakpoints";
 
-// 2. Dependencies //
 
-// Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/.
-@import "core/normalize";
+// 2. Dependencies //
 
 // Open Color: Color scheme for UI design, from https://github.com/yeun/open-color.
 @import "core/open-color";
+
+// Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/.
+@import "core/normalize";
 
 // Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/.
 @import "core/reset";
