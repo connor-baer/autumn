@@ -17,5 +17,4 @@ gulp.task('clean-tidy', ['clean-wipe'], function() {
   return del(config.tidy);
 });
 
-
 gulp.task('clean', ['clean-tidy']);

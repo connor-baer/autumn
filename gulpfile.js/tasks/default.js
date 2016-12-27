@@ -22,7 +22,7 @@ gulp.task('default', ['watch']);
 gulp.task('setup', function(callback) {
   runSequence('update', 'icons',
   [
-    'default'
+    'default',
   ],
   callback);
 });
@@ -37,7 +37,7 @@ gulp.task('build', function(callback) {
     'styles',
     'scripts',
     'images',
-    'jekyll'
+    'jekyll',
   ],
   callback);
 });
