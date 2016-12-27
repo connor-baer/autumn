@@ -12,7 +12,6 @@ gems:
 
 
 # Settings
-color:                '#fa5252'
 exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
 permalink:            /:title/
 compress_html:
@@ -23,7 +22,7 @@ compress_html:
 # Site meta
 title:                'Change'
 tagline:              'Embrace change.'
-description:          'Change is a minimalist Jekyll theme built by <a href="http://connorbaer.io/" title="Follow Connor Bär on Twitter.">Connor Bär</a>.'
+description:          'Change is a minimalist Jekyll theme <a href="http://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
 url:                  http://change.madebyconnor.co
 baseurl:              ''
