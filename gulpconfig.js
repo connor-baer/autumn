@@ -24,10 +24,9 @@ var pkg  = require('./package.json'), // Allows access to the project metadata f
   src     = '', // The raw material of the theme: custom scripts, SCSS source files, images, etc.; do not delete this folder!
   dist    = src + '_site/', // The distribution package that you'll be uploading to your server; delete it anytime.
   assets  = 'assets/', // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet).
-  bower   = 'bower_components/', // Bower packages.
+  bower   = 'bower_components/' // Bower components.
   modules = 'node_modules/' // NPM packages.
 ;
-
 
 module.exports = {
 
@@ -62,7 +61,6 @@ module.exports = {
       src + '*/*.{html,md,yml,yaml,txt}',
       src + '*.{html,md,yml,yaml,txt}',
       '!' + modules,
-      '!' + bower,
       '!' + dist,
     ],
     styles:  src + '_scss/**/*.scss',
@@ -76,7 +74,7 @@ module.exports = {
   update: {
     // Copies dependencies from package managers to `_scss` and renames them to allow for them to be imported as a Sass file.
     src: [
-      bower + 'normalize-css/normalize.css',
+      modules + 'normalize.css/normalize.css',
       modules + 'open-color/open-color.scss',
     ],
     dest: '_scss/core',
@@ -90,8 +88,8 @@ module.exports = {
   // 5. Clean //
 
   clean: {
-    tidy: [ src + '**/.DS_Store' ], // A glob pattern matching junk files to clean out of `build`; feel free to add to this array.
-    wipe: [ dist + assets ], // Clean this out before creating a new distribution copy.
+    tidy: [src + '**/.DS_Store'], // A glob pattern matching junk files to clean out of `build`; feel free to add to this array.
+    wipe: [dist + assets], // Clean this out before creating a new distribution copy.
   },
 
 
@@ -131,7 +129,7 @@ module.exports = {
         src + '_js/custom.js',
       ],
       navigation: [
-        bower + 'smooth-scroll/dist/js/smooth-scroll.js',
+        modules + 'smooth-scroll/dist/js/smooth-scroll.js',
         modules + 'turbolinks/dist/turbolinks.js',
       ],
     },
@@ -178,11 +176,11 @@ module.exports = {
             suffix: '-small',
             extname: '.jpg',
           },
-        }, ],
+        },],
       },
       options: {
         errorOnUnusedImage: false,
-        silent: true
+        silent: true,
       },
       dest: src + assets + 'images/',
     },
@@ -197,7 +195,8 @@ module.exports = {
       appName: pkg.name,
       appDescription: pkg.description,
       developerName: pkg.author,
-      background: '#f9423a',
+      background: '#ffffff',
+      theme_color: '#f9423a',
       path: src + assets + 'icons/',
       url: pkg.homepage,
       display: 'standalone',
@@ -217,7 +216,7 @@ module.exports = {
         favicons: true,             // Create regular favicons. `boolean`
         firefox: true,              // Create Firefox OS icons. `boolean` or `{ offset: offsetInPercentage }`
         windows: true,              // Create Windows 8 tile icons. `boolean`
-        yandex: false                // Create Yandex browser icon. `boolean`
+        yandex: false,                // Create Yandex browser icon. `boolean`
       },
     },
     destHtml: src,

@@ -22,7 +22,7 @@ compress_html:
 # Site meta
 title:                'Change'
 tagline:              'Embrace change.'
-description:          'Change is a minimalist Jekyll theme <a href="http://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
+description:          'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
 url:                  http://change.madebyconnor.co
 baseurl:              ''
@@ -30,13 +30,14 @@ assets:               /assets
 images:               /images/
 image:                index-large.jpg
 logo:                 /assets/icons/apple-icon-144x144.png
+dark_theme:           false
 
 author:
   name:               Connor Bär
   bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
   image:              author
-  url:                http://connorbaer.io
-  email:              hello@connorbaer.io
+  url:                http://connorbaer.co
+  email:              hello@connorbaer.co
   twitter:            connor_baer
 
 social:
@@ -45,19 +46,19 @@ social:
   github:             https://github.com/madebyconnor/change
   medium:             https://blog.connorbaer.io
 
-version:              3.1.2
+version:              3.1.3
 
 github:
   repo:               https://github.com/madebyconnor/change
 
 
 # Integrations
-typekit:              fcv7rfe
+# typekit:              fcv7rfe
 
-# google_fonts:
-#   name:             weights
+google_fonts:
+  overpass:           400,600,800
 
-# google_analytics_key: UA-37412525-4
+google_analytics_key: UA-94021817-2
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 

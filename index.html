@@ -22,7 +22,7 @@ exclude: true
     <h2 class="section-title">About</h2>
     <article>
       <h3 class="section-header">Made by Connor.</h3>
-      <p class="section-body">{{ site.description }} It serves as the foundation for our websites. You are free to use it under the <a href="https://github.com/madebyconnor/change/blob/master/LICENSE.md">MIT license</a>.</p>
+      <p class="section-body">Change is a minimalistic, duo-chromatic <a href="http://jekyllrb.com">Jekyll theme</a> that pairs a prominent headline with two column content. You are free to use it under the <a href="https://github.com/madebyconnor/change/blob/master/LICENSE.md">MIT license</a>.</p>
       <a class="section-link" href="{{ site.github.repo }}">Fork on GitHub</a>
     </article>
   </section>
@@ -34,7 +34,7 @@ exclude: true
       {% for page in posts %}
       <h3 class="section-header"><a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h3>
         {% include core/date.html %}
-        <p class="section-body">{{ page.excerpt | strip_html }}</p>
+        <p class="section-body">{{ page.excerpt | strip_html | truncatewords: 32 }}</p>
       {% endfor %}
       <a class="section-link" href="{{ site.social.medium }}">Read more on Medium</a>
     </article>
