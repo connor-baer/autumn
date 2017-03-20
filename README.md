@@ -5,7 +5,7 @@
 Change is a minimalistic, duo-chromatic [Jekyll](http://jekyllrb.com) theme that pairs a prominent headline with two column content.
 
 
-![Change screenshot](/_images/screenshot.png)
+![Change screenshot](https://github.com/madebyconnor/change/blob/master/_images/screenshot.png)
 
 
 ## Contents
