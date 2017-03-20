@@ -2,8 +2,8 @@
 layout: default
 lang: en
 ref: blog
-title: 'Writing'
-image: true
+title: 'Blog'
+image: false
 ---
 
 {% include core/metabar.html %}
@@ -32,9 +32,8 @@ image: true
 			</a>
     </div>
     {% if page.image %}
-      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )">
+      <div class="hero-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
     {% endif %}
-    </div>
   </header>
 
   <section id="about" class="section">
@@ -53,7 +52,7 @@ image: true
       {% for page in posts %}
       <h3 class="section-header"><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h3>
         {% include core/date.html %}
-        <p class="section-body">{{ page.excerpt | strip_html }}</p>
+        <p class="section-body">{{ page.excerpt | strip_html | truncatewords: 32 }}</p>
       {% endfor %}
       <a class="section-link" href="{{ site.social.medium }}">Read more on Medium</a>
     </article>

@@ -60,4 +60,4 @@ script:
 notifications:
     email:
         email:
-            - admin@connorbaer.io
+            - admin@connorbaer.co
