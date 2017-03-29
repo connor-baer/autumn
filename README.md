@@ -2,6 +2,8 @@
 
 # Change
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/madebyconnor/change.svg)](https://greenkeeper.io/)
+
 Change is a minimalistic, duo-chromatic [Jekyll](http://jekyllrb.com) theme that pairs a prominent headline with two column content.
 
 
