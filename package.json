@@ -31,7 +31,7 @@
     "open-color": "^1.4.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "turbolinks": "^5.0.0",
-    "typi": "^3.0.0"
+    "typi": "^2.3.0"
   },
   "devDependencies": {
     "browser-sync": "^2.17.6",
@@ -52,6 +52,7 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "jshint": "^2.9.4",
     "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2"
