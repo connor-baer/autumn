@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/madebyconnor/change/issues"
   },
-  "homepage": "http://change.madebyconnor.co",
+  "homepage": "https://madebyconnor.github.io/change",
   "dependencies": {
     "normalize.css": "^6.0.0",
     "open-color": "^1.4.0",

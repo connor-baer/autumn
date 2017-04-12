@@ -24,7 +24,7 @@ title:                'Change'
 tagline:              'Embrace change.'
 description:          'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-url:                  http://change.madebyconnor.co
+url:                  https://madebyconnor.github.io/change
 baseurl:              ''
 assets:               /assets
 images:               /images/
@@ -36,7 +36,7 @@ author:
   name:               Connor Bär
   bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
   image:              author
-  url:                http://connorbaer.co
+  url:                https://connorbaer.co
   email:              hello@connorbaer.co
   twitter:            connor_baer
 
