@@ -24,8 +24,8 @@ title:                'Change'
 tagline:              'Embrace change.'
 description:          'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-url:                  https://madebyconnor.github.io/change
-baseurl:              ''
+url:                  https://madebyconnor.github.io
+baseurl:              /change
 assets:               /assets
 images:               /images/
 image:                index-large.jpg
