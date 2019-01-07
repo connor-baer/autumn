@@ -4,7 +4,8 @@
   "description": "Change is a minimalistic, duo-chromatic Jekyll theme.",
   "main": "index.html",
   "scripts": {
-    "start": "gulp default"
+    "start": "gulp default",
+    "lint": "foundry run eslint --fix \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "typi": "^2.3.0"
   },
   "devDependencies": {
+    "@sumup/foundry": "^1.0.3",
     "browser-sync": "^2.17.6",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
