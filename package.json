@@ -1,10 +1,10 @@
 {
   "name": "change",
-  "version": "3.0.0",
-  "description": "Change is a minimalist Jekyll theme built by @connor_baer.",
+  "version": "4.0.0",
+  "description": "Change is a minimalistic, duo-chromatic Jekyll theme.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp default"
   },
   "repository": {
     "type": "git",
