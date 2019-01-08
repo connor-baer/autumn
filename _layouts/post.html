@@ -44,7 +44,7 @@ font: serif
       <article class="next-post">
         <h4 class="next-header">Next Post</h4>
         {% if page.next.image %}
-        <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.next.ref }}-small.jpg')"></div>
+        <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}posts/{{ page.next.ref }}-small.jpg')"></div>
         {% endif %}
         <h5 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h5>
       </article>
