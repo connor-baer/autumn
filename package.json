@@ -1,10 +1,11 @@
 {
   "name": "change",
-  "version": "3.0.0",
-  "description": "Change is a minimalist Jekyll theme built by @connor_baer.",
+  "version": "4.0.0",
+  "description": "Change is a minimalistic, duo-chromatic Jekyll theme.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp default",
+    "lint": "foundry run eslint --fix \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://madebyconnor.github.io/change",
   "dependencies": {
+    "mappy-breakpoints": "^0.2.3",
+    "modularscale-sass": "^3.0.8",
     "normalize.css": "^6.0.0",
     "open-color": "^1.4.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
@@ -34,9 +37,13 @@
     "typi": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@sumup/foundry": "^1.0.3",
     "browser-sync": "^2.17.6",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
     "gulp-changed": "^2.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
