@@ -74,7 +74,7 @@
     padding: 2rem;
     transform: translateY(-2rem);
     transition: transform $long, opacity $long, visibility $long;
-    background-color: transparentize(palette(white), .05);
+    background-color: transparentize(palette(white), 0.05);
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
@@ -86,7 +86,7 @@
     }
 
     .nav-close {
-      padding-top: .75rem;
+      padding-top: 0.75rem;
       float: right;
     }
 

@@ -7,7 +7,6 @@
 // 3. Labels
 // 4. Highlight
 
-
 // 1. Buttons //
 
 .button {
@@ -15,10 +14,10 @@
 
   display: inline-block;
   margin: 1rem 0;
-  padding: .25rem 1rem;
+  padding: 0.25rem 1rem;
   transition: $short;
   border: 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: none;
   background-color: palette($primary);
   color: palette(white);
@@ -29,10 +28,9 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 2px 4px rgba(palette(gray, dark), .33);
+    box-shadow: 0 2px 4px rgba(palette(gray, dark), 0.33);
   }
 }
-
 
 // 2. Inputs //
 
@@ -41,10 +39,10 @@
 
   display: block;
   width: 100%;
-  padding: .25rem 1rem;
+  padding: 0.25rem 1rem;
   transition: border-color $short;
   border: 2px solid palette(gray);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: none;
   background-color: palette(white);
   font-family: $sans;
@@ -77,11 +75,11 @@ textarea {
 
   display: block;
   height: 2.5rem;
-  margin: 2rem 0 .25rem;
-  padding: .25rem 1rem;
+  margin: 2rem 0 0.25rem;
+  padding: 0.25rem 1rem;
   transition: border-color $short, background-color $short;
   border: 1px solid palette(gray);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: none;
   background-color: palette(gray, lighter);
   color: palette(gray);
@@ -97,7 +95,6 @@ textarea {
   }
 }
 
-
 // 3. Labels //
 
 .form-group {
@@ -108,7 +105,7 @@ textarea {
 
 .form-icon {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   left: 1rem;
   width: 1.25rem;
   height: 1.25rem;
@@ -136,7 +133,7 @@ textarea {
   @include font(body);
 
   position: absolute;
-  top: calc(.25rem + 1px);
+  top: calc(0.25rem + 1px);
   left: 1rem;
   transition: $short;
   color: palette(gray);
@@ -186,12 +183,11 @@ textarea {
   }
 }
 
-
 // 4. Highlighter //
 
 .form-highlight {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   left: 1rem;
   width: 33%;
   height: 1.25rem;

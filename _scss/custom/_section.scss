@@ -2,7 +2,6 @@
 
 // Style the homepage sections here.
 
-
 .section {
   @include clearfix;
 
@@ -16,7 +15,7 @@
     @include ctnr(two);
 
     > *:first-child {
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
   }
 }
@@ -34,13 +33,13 @@
 
   display: block;
   margin-top: 2rem;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .section-body {
   @include font(body);
 
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   transition: color $short;
 
@@ -57,6 +56,6 @@
   cursor: pointer;
 
   &::after {
-    content: " →";
+    content: ' →';
   }
 }

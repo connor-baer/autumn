@@ -8,7 +8,13 @@
 
 // 1. Breakpoints //
 
-$breakpoints: (x-small: 359px, small: 576px, medium: 769px, large: 1025px, x-large: 1441px);
+$breakpoints: (
+  x-small: 359px,
+  small: 576px,
+  medium: 769px,
+  large: 1025px,
+  x-large: 1441px
+);
 
 // You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
 $mappy-queries: (
@@ -24,7 +30,7 @@ $mappy-queries: (
   &::after {
     display: table;
     clear: both;
-    content: "";
+    content: '';
   }
 }
 
@@ -37,14 +43,12 @@ $container-width: 50rem;
 @mixin ctnr($width: null) {
   @if $width == null {
     @warn "Mixin ctnr() received no input! Please provide a width.";
-  }
-  @else if $width == "full" {
+  } @else if $width == 'full' {
     display: block;
     width: 100vw;
     max-width: 100%;
     clear: both;
-  }
-  @else if $width == "three" {
+  } @else if $width == 'three' {
     display: block;
     width: auto;
     max-width: calc(100% - 4rem);
@@ -55,8 +59,7 @@ $container-width: 50rem;
       width: calc(100% - 8rem);
       max-width: $container-width;
     }
-  }
-  @else if $width == "two" {
+  } @else if $width == 'two' {
     @include clearfix;
 
     display: block;
@@ -68,8 +71,7 @@ $container-width: 50rem;
       padding-left: 2rem;
       float: right;
     }
-  }
-  @else if $width == "one" {
+  } @else if $width == 'one' {
     @include clearfix;
 
     display: block;
@@ -81,8 +83,7 @@ $container-width: 50rem;
       padding-right: 2rem;
       float: left;
     }
-  }
-  @else {
+  } @else {
     @warn "Mixin ctnr() received invalid input! This width does not exist.";
   }
 }
