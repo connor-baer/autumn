@@ -1,7 +1,6 @@
 # Dependencies
-markdown:             kramdown
-highlighter:          rouge
-
+markdown: kramdown
+highlighter: rouge
 
 # Gems
 gems:
@@ -10,57 +9,71 @@ gems:
   - jekyll-redirect-from
   - jekyll-seo-tag
 
-
 # Settings
-exclude:              [CNAME, README.md, NOTES.md, LICENSE.md, .gitignore, package.json, bower.json, _js, _scss, _images, gulpfile.js, gulpconfig.js, node_modules, bower_components, gemfile, Gemfile.lock]
-permalink:            /:title/
+exclude:
+  [
+    CNAME,
+    README.md,
+    LICENSE.md,
+    .gitignore,
+    package.json,
+    yarn.lock,
+    _js,
+    _scss,
+    _images,
+    gulpfile.js,
+    gulpconfig.js,
+    node_modules,
+    gemfile,
+    Gemfile.lock,
+    lint-staged.config.js,
+    prettier.config.js,
+  ]
+permalink: /:title/
 compress_html:
   clippings: all
   comments: all
 
-
 # Site meta
-title:                'Change'
-tagline:              'Embrace change.'
-description:          'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
-keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-url:                  https://madebyconnor.github.io
-baseurl:              /change
-assets:               /assets
-images:               /images/
-image:                index-large.jpg
-logo:                 /assets/icons/apple-icon-144x144.png
-dark_theme:           false
+title: 'Change'
+tagline: 'Embrace change.'
+description: 'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
+keywords: 'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
+url: https://madebyconnor.github.io
+baseurl: /change
+assets: /assets
+images: /images/
+image: index-large.jpg
+logo: /assets/icons/apple-icon-144x144.png
+dark_theme: false
 
 author:
-  name:               Connor Bär
-  bio:                Hi, I'm Connor, the author of this blog. Nice to meet you!
-  image:              author
-  url:                https://connorbaer.co
-  email:              hello@connorbaer.co
-  twitter:            connor_baer
+  name: Connor Bär
+  bio: Hi, I'm Connor, the author of this blog. Nice to meet you!
+  image: author
+  url: https://connorbaer.co
+  email: hello@connorbaer.co
+  twitter: connor_baer
 
 social:
-  twitter:            https://twitter.com/connor_baer
-  instagram:          https://instagram.com/connor_baer
-  github:             https://github.com/madebyconnor/change
-  medium:             https://blog.connorbaer.io
+  twitter: https://twitter.com/connor_baer
+  instagram: https://instagram.com/connor_baer
+  github: https://github.com/madebyconnor/change
+  medium: https://medium.com/@connor_baer
 
-version:              3.1.3
+version: 4.0.0
 
 github:
-  repo:               https://github.com/madebyconnor/change
-
+  repo: https://github.com/madebyconnor/change
 
 # Integrations
 # typekit:              fcv7rfe
 
 google_fonts:
-  Overpass:           400, 600, 800
+  Overpass: 400, 600, 800
 
 google_analytics_key: UA-94021817-2
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
-
 
 # Content
 excerpt_separator: <!-- Read more -->
