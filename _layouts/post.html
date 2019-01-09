@@ -46,7 +46,7 @@ font: serif
         {% if page.next.image %}
         <div class="next-image" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}posts/{{ page.next.ref }}-small.jpg')"></div>
         {% endif %}
-        <h5 class="next-title"><a href="{{page.next.url}}">{{page.next.title}}</a></h5>
+        <h5 class="next-title"><a href="{{ site.baseurl }}{{ page.next.url }}">{{page.next.title}}</a></h5>
       </article>
     </aside>
     {% endif %}
