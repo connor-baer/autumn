@@ -35,12 +35,12 @@ compress_html:
   comments: all
 
 # Site meta
-title: 'Change'
+title: 'Autumn'
 tagline: 'Embrace change.'
-description: 'Change is a minimalist Jekyll theme <a href="https://madebyconnor.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
-keywords: 'connor, baer, bear, designer, developer, traveller, design, code, jekyll, change, theme, for hire'
-url: https://madebyconnor.github.io
-baseurl: /change
+description: 'Autumn is a minimalist Jekyll theme <a href="https://connorbaer.co/" target="_blank" rel="noopener noreferrer">Made by Connor</a>.'
+keywords: 'connor, baer, bear, designer, developer, traveller, design, code, jekyll, autumn, theme, for hire'
+url: https://connor-baer.github.io
+baseurl: /autumn
 assets: /assets
 images: /images/
 image: index-large.jpg
@@ -58,13 +58,13 @@ author:
 social:
   twitter: https://twitter.com/connor_baer
   instagram: https://instagram.com/connor_baer
-  github: https://github.com/madebyconnor/change
+  github: https://github.com/connor-baer/autumn
   medium: https://medium.com/@connor_baer
 
 version: 4.0.0
 
 github:
-  repo: https://github.com/madebyconnor/change
+  repo: https://github.com/connor-baer/autumn
 
 # Integrations
 # typekit:              fcv7rfe
@@ -79,4 +79,4 @@ google_analytics_key: UA-94021817-2
 excerpt_separator: <!-- Read more -->
 
 navigation:
-  GitHub: https://github.com/madebyconnor/change
+  GitHub: https://github.com/connor-baer/autumn

@@ -1,7 +1,7 @@
 {
-  "name": "change",
+  "name": "autumn",
   "version": "4.0.0",
-  "description": "Change is a minimalistic, duo-chromatic Jekyll theme.",
+  "description": "Autumn is a minimalistic, duo-chromatic Jekyll theme.",
   "main": "index.html",
   "scripts": {
     "start": "gulp default",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madebyconnor/change.git"
+    "url": "git+https://github.com/connor-baer/autumn.git"
   },
   "keywords": [
     "connor",
@@ -24,9 +24,9 @@
   "author": "Connor Bär",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madebyconnor/change/issues"
+    "url": "https://github.com/connor-baer/autumn/issues"
   },
-  "homepage": "https://madebyconnor.github.io/change",
+  "homepage": "https://connor-baer.github.io/autumn",
   "dependencies": {
     "mappy-breakpoints": "^0.2.3",
     "modularscale-sass": "^3.0.8",
