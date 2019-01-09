@@ -128,12 +128,12 @@ $typi: (
 
     &::after {
       display: block;
-      width: 2em;
-      height: 0.16em;
-      margin-top: 0.5rem;
-      border-radius: 0.08em;
-      background-color: palette($primary);
       content: '';
+      width: 2em;
+      height: 0;
+      margin-top: .5rem;
+      border-top: 0.16em solid palette($primary);
+      border-right: 2px solid transparent;
     }
 
     .serif & {

@@ -5,6 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp default",
+    "setup": "gulp setup",
+    "build": "gulp build",
     "lint": "foundry run eslint --fix \"**/*.js\""
   },
   "repository": {

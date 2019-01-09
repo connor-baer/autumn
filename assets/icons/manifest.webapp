@@ -1,7 +1,7 @@
 {
-  "version": "3.0.0",
-  "name": "change",
-  "description": "Change is a minimalist Jekyll theme built by @connor_baer.",
+  "version": "4.0.0",
+  "name": "autumn",
+  "description": "Autumn is a minimalistic, duo-chromatic Jekyll theme.",
   "icons": {
     "60": "assets/icons/firefox_app_60x60.png",
     "128": "assets/icons/firefox_app_128x128.png",

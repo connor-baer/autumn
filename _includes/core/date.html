@@ -3,12 +3,8 @@
 {% endcapture %}
 
 {% capture timeToRead %}
-	{{ wordsInPost | divided_by: 200 }}
+	{{ wordsInPost | divided_by: 200 | at_least: 1 }}
 {% endcapture %}
-
-{% if timeToRead == "0" %}
-	{{ assign timeToRead = 1 }}
-{% endif %}
 
 <div class="meta">
 	<time class="meta-text" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>

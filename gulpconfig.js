@@ -169,6 +169,35 @@ module.exports = {
               extname: '.jpg'
             }
           }
+        ],
+        // Convert all images to JPEG format.
+        'authors/*': [
+          {
+            // author.jpg is 500 pixels wide.
+            width: 500,
+            withoutEnlargement: false,
+            rename: {
+              extname: '.jpg'
+            }
+          },
+          {
+            // author-large.jpg is 1000 pixels wide.
+            width: 500 * 2,
+            withoutEnlargement: false,
+            rename: {
+              suffix: '-large',
+              extname: '.jpg'
+            }
+          },
+          {
+            // author-small.jpg is 250 pixels wide.
+            width: 500 / 2,
+            withoutEnlargement: false,
+            rename: {
+              suffix: '-small',
+              extname: '.jpg'
+            }
+          }
         ]
       },
       options: {
