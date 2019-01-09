@@ -13,11 +13,11 @@ They generally don’t differentiate between the unique cultures of Botswana and
 
 <figure class="sidebar">
   <img
-  	srcset="{{ site.assets }}{{ site.images }}africa-country-1-large.jpg 2000w,
-  	        {{ site.assets }}{{ site.images }}africa-country-1.jpg 1000w,
-  	        {{ site.assets }}{{ site.images }}africa-country-1-small.jpg 500w"
+  	srcset="{{ site.baseurl }}{{ site.assets }}{{ site.images }}posts/africa-country-1-large.jpg 2000w,
+  	        {{ site.baseurl }}{{ site.assets }}{{ site.images }}posts/africa-country-1.jpg 1000w,
+  	        {{ site.baseurl }}{{ site.assets }}{{ site.images }}posts/africa-country-1-small.jpg 500w"
     sizes="(min-width: 769px): 25vw, calc(100vw - 4rem)"
-  	src="{{ site.assets }}{{ site.images }}africa-country-1.jpg"
+  	src="{{ site.baseurl }}{{ site.assets }}{{ site.images }}africa-country-1.jpg"
   	alt="Yes, this photo was taken in Africa. But it is wrong to reduce ‘Africa’ to big eyes and poverty. There is so much more to the continent and each country is different.">
   <figcaption>Yes, this photo was taken in Africa. But it is wrong to reduce ‘Africa’ to big eyes and poverty. There is so much more to the continent and each country is different.</figcaption>
 </figure>
