@@ -51,7 +51,6 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-favicons": "^2.2.7",
     "gulp-filter": "^5.0.0",
-    "gulp-jshint": "^2.0.3",
     "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
@@ -61,7 +60,6 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "jshint": "^2.9.4",
     "merge-stream": "^1.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2"
