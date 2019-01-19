@@ -2,12 +2,12 @@
   "name": "autumn",
   "version": "4.0.0",
   "description": "Autumn is a minimalistic, duo-chromatic Jekyll theme.",
-  "main": "index.html",
+  "main": "_site/index.html",
   "scripts": {
     "start": "gulp default",
     "setup": "gulp setup",
     "build": "gulp build",
-    "lint": "foundry run eslint --fix \"**/*.js\""
+    "lint": "foundry run eslint --fix \"_js/**/*.js\""
   },
   "repository": {
     "type": "git",
