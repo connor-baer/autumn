@@ -105,7 +105,7 @@ module.exports = {
       includePaths: [nodeModules], // Adds node modules to the load path so you can @import directly
       precision: 6,
       onError(err) {
-        return console.log(err);
+        return console.error(err);
       }
     }
   },
@@ -115,16 +115,17 @@ module.exports = {
   scripts: {
     bundles: {
       // Bundles are defined by a name and an array of chunks (below) to concatenate; warning: this method offers no dependency management!
-      scripts: ['navigation', 'core']
+      scripts: ['core', 'custom']
     },
     chunks: {
       // Chunks are arrays of paths or globs matching a set of source files; this way you can organize a bunch of scripts that go together into pieces that can then be bundled (above)
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
-      core: [`${src}_js/core.js`, `${src}_js/custom.js`],
-      navigation: [
-        `${nodeModules}smooth-scroll/dist/js/smooth-scroll.js`,
-        `${nodeModules}turbolinks/dist/turbolinks.js`
-      ]
+      core: [
+        `${nodeModules}smooth-scroll/dist/smooth-scroll.js`,
+        `${src}_js/core.js`,
+        `${src}_js/custom.js`
+      ],
+      custom: [`${src}_js/custom.js`]
     },
     dest: assets, // Where the scripts end up in your theme
     minify: {

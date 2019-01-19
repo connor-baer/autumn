@@ -35,7 +35,6 @@
     "normalize.css": "^6.0.0",
     "open-color": "^1.4.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
-    "turbolinks": "^5.0.0",
     "typi": "^2.3.0"
   },
   "devDependencies": {

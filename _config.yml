@@ -42,7 +42,7 @@ keywords: 'connor, baer, bear, designer, developer, traveller, design, code, jek
 url: https://connor-baer.github.io
 baseurl: /autumn
 assets: /assets
-images: /images/
+images: /images
 image: index-large.jpg
 logo: /assets/icons/apple-icon-144x144.png
 dark_theme: false
