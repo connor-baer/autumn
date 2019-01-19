@@ -8,11 +8,11 @@
 
 // 1. Base colors
 
-$primary: red;
-$secondary: orange;
+$primary: $oc-red-5 !default;
+$secondary: $oc-orange-5 !default;
 
-$black: #fff;
-$white: $oc-gray-9;
+$black: #fff !default;
+$white: $oc-gray-9 !default;
 
 // 2. Color transformations //
 

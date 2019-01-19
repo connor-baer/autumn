@@ -8,21 +8,21 @@
 
 // 1. Variables //
 
-$sans: 'Overpass', Arial, sans-serif;
-$sans-normal: 400;
-$sans-semibold: 600;
-$sans-bold: 800;
+$sans: 'Overpass', Arial, sans-serif !default;
+$sans-normal: 400 !default;
+$sans-semibold: 600 !default;
+$sans-bold: 800 !default;
 
-$serif: Georgia, serif;
-$serif-normal: 500;
-$serif-bold: 700;
+$serif: Georgia, serif !default;
+$serif-normal: 500 !default;
+$serif-bold: 700 !default;
 
-$code: 'Courier New', Courier, monospace;
+$code: 'Courier New', Courier, monospace !default;
 
 $modularscale: (
   base: 1em,
   ratio: 1.25
-);
+) !default;
 
 $typi: (
   null: (
@@ -32,7 +32,7 @@ $typi: (
   x-small: 16px,
   medium: 20px,
   x-large: 24px
-);
+) !default;
 
 // 2. underline() //
 

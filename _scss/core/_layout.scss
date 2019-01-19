@@ -14,7 +14,7 @@ $breakpoints: (
   medium: 769px,
   large: 1025px,
   x-large: 1441px
-);
+)  !default;
 
 // You can use any valid arguments inserted into mappy-bp as the map values. Any of the following would do.
 $mappy-queries: (
@@ -22,7 +22,7 @@ $mappy-queries: (
   tablet: mappy-bp(small),
   desktop: mappy-bp(medium),
   desktop-large: mappy-bp(large)
-);
+)  !default;
 
 // 2. Helpers //
 
@@ -38,7 +38,7 @@ $mappy-queries: (
 
 // Content can take on four different widths: full, three, two and one.
 
-$container-width: 50rem;
+$container-width: 50rem ;
 
 @mixin ctnr($width: null) {
   @if $width == null {
