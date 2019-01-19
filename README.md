@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/connor-baer/autumn.svg?branch=master)](https://travis-ci.org/connor-baer/autumn) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/381a869edfa34ea1a424274cf2e791a7)](https://www.codacy.com/app/connor_baer/autumn?utm_source=github.com&utm_medium=referral&utm_content=connor-baer/autumn&utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/connor-baer/autumn.svg?branch=master)](https://travis-ci.org/connor-baer/autumn) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c7341b497724019a7383ef515d22037)](https://www.codacy.com/app/connor_baer/autumn?utm_source=github.com&utm_medium=referral&utm_content=connor-baer/autumn&utm_campaign=Badge_Grade)
 
 # 🍁 Autumn
 
