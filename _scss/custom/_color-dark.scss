@@ -18,6 +18,13 @@ $white: $oc-gray-9 !default;
 
 // Sass map for the color palette; see `_library.scss` for the palette() function.
 $_palettes: (
+  $primary: (
+    lighter: $oc-red-2,
+    light: $oc-red-4,
+    base: $oc-red-6,
+    dark: $oc-red-8,
+    darker: $oc-red-9
+  ),
   black: (
     base: $black,
     light: $black,
